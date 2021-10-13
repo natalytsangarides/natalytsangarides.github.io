@@ -2,8 +2,8 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     
     "title": {
-      "text": "TITLE HERE",
-      "subtitle":"Sub-title here",
+      "text": "New Covid Cases, Rolling Rate",
+      "subtitle":"By Publish Date",
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
@@ -19,7 +19,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Bristol, City of", "Bolton", "Glasgow City"]}
+          "oneOf": ["Reading", "Bristol, City of", "Glasgow City"]}
           }
   
   
@@ -50,8 +50,8 @@
       "color": {
         "field": "areaName",
         "type": "nominal",
-        "scale": {"scheme": "set1"},
-        "title": "LEGEND TITLE",
+        "scale": {"scheme": "blues"},
+        "title": "Region",
         "legend": {
           "orient": "top-left", 
           "fillColor": "#FcFdFd"}
