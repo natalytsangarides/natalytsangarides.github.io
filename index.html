@@ -1,3 +1,7 @@
+<!--------------------------------------------------------------------------
+ECON30006: Data Science 2021 
+Nataly Tsangarides 
+--------------------------------------------------------------------------->
 
 
 <!DOCTYPE html>
@@ -31,7 +35,12 @@
 
     <h3>Covid-19</h3>
 
-    <p>The first chart tracks Covid-19 cases by UK region.</p>
+    <!--Chart 1 showing Covid Cases by Region -->
+    <div class="chart" id="chart1" tabindex="1">
+        <script>
+          var myChart1 = "charts/chart1_covidUKRegions.json";
+          vegaEmbed('#chart1', myChart1);
+        </script>
 
 <!--Vaga embed, with notes for what is going on-->
 <div class="chart" id="firstChart">
