@@ -41,7 +41,7 @@
       },
   
       "y": {
-        "field": "cumPeopleVaccinatedCompleteByPublishDate",
+        "field": "NewCases",
         "type": "quantitative",
         "title": null,
         "axis": {"grid": false}
