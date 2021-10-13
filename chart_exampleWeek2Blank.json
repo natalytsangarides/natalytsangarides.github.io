@@ -7,7 +7,7 @@
       "subtitleFontStyle":"italic",
       "subtitleFontSize":10,
       "anchor": "start",
-      "color": "black"
+      "color": "red"
     },
     
      "data": {
@@ -41,7 +41,7 @@
       },
   
       "y": {
-        "field": "VARIABLE YOU ARE MEASURING HERE",
+        "field": "cumPeopleVaccinatedCompleteByPublishDate",
         "type": "quantitative",
         "title": null,
         "axis": {"grid": false}
@@ -51,10 +51,10 @@
         "field": "areaName",
         "type": "nominal",
         "scale": {"scheme": "set1"},
-        "title": "LEGEND TITLE",
+        "title": "REGION",
         "legend": {
           "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
+          "fillColor": "#fdfdfd"}
       }
   }
   }
