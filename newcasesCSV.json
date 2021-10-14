@@ -19,7 +19,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Reading", "Cambridge", "York"]}
+          "oneOf": ["Reading", "South Cambridgeshire", "East Riding of Yorkshire"]}
           }
   
   
