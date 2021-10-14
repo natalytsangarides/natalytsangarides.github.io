@@ -19,7 +19,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Reading", "Bristol, City of", "Glasgow City"]}
+          "oneOf": ["Reading", "Cambridge", "York"]}
           }
   
   
