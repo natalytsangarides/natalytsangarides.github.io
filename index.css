@@ -1,29 +1,29 @@
 body{
 
-    background-color: #864F9E ;
-    max-width: 450p;
+    background-color: #bcddd6 ;
+    max-width: 30%;
     margin: auto;
 }
 
 h1{
 
-    color: rgb(219, 188, 188);
+    color: rgb(6, 6, 6);
      font-family: 'Nunito', sans-serif;
 }
 
 h3{
-    color: #f4c245;
+    color: #751575;
     font-family: 'Nunito', sans-serif;
 }
 
 p{font-family: 'Nunito', sans-serif;
-color: white;
+color: rgb(20, 2, 2);
 }
 
 
 
 .chart{
-    width: 330px;
+    width: 330p;
     border-width: 10px;
     background-color: white;
     border-style: solid;
@@ -33,6 +33,7 @@ color: white;
 
 
 }
+
 
 
 
