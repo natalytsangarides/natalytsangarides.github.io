@@ -45,7 +45,7 @@
   ],
   "encoding": {
     "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0, "grid": false}, "title": "Date"},
-    "y": {"field": "price", "type": "quantitative","axis": {"grid": false}, "title": "BTC price"}
+    "y": {"field": "CBBTCUSD", "type": "quantitative","axis": {"grid": false}, "title": "BTC price"}
   }
 }
 
