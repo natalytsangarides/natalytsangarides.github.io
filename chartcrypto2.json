@@ -11,7 +11,10 @@
   "height":300,
 
   "data": {
-   "values": [{"date": "2016-08-19", "CBBTCUSD": 573.67}, {"date": "2017-01-02", "CBBTCUSD": 1011.45}, {"date": "2019-09-14", "CBBTCUSD": 10360.2}
+   "values":[{"date": "2016-08-19", "CBBTCUSD": 573.67},{"date": "2016-12-20", "CBBTCUSD": 798.99},  {"date": "2017-10-01", "CBBTCUSD": 	4394.81}, 
+             {"date": "2017-01-02", "CBBTCUSD": 1011.45}, {"date": "2018-01-04", "CBBTCUSD": 15144.99},{"date": "2018-04-11", "CBBTCUSD": 	6942.99}, 
+             {"date": "2018-05-10", "CBBTCUSD":9010.51}, {"date": "2019-05-18", "CBBTCUSD": 7262.4}, {"date": "2019-07-10", "CBBTCUSD": 12083.13}, 
+             {"date": "2019-09-14", "CBBTCUSD": 10360.2},{"date": "2020-01-12", "CBBTCUSD": 8192.66}, {"date": "2021-06-09", "CBBTCUSD": 37357.02}
 ]
    },
 "mark": {
