@@ -16,7 +16,6 @@
    },
 "mark": {
     "type": "line",
-    "interpolate": "monotone",
     "color": "orange"
   },
   "params": [
@@ -44,7 +43,7 @@
     }
   ],
   "encoding": {
-    "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0, "grid": false}, "title": "Date"},
+    "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0, "grid": false,"format":"%m/%d/%Y"}, "title": "Date"},
     "y": {"field": "CBBTCUSD", "type": "quantitative","axis": {"grid": false}, "title": "BTC price"}
   }
 }
