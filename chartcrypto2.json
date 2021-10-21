@@ -23,7 +23,7 @@
 
 
   "data": {
-   "values": [{"date": 19/08/2016, "CBBTCUSD": 573.67}, {"date": 20/08/2016, "CBBTCUSD": 581.87}, {"date": 24/08/2016, "CBBTCUSD": 578.47}
+   "values": [{"date": 2016-08-19, "CBBTCUSD": 573.67}, {"date": 2016-08-20, "CBBTCUSD": 581.87}, {"date": 2016-08-24, "CBBTCUSD": 578.47}
         ]
    },
 
