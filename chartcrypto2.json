@@ -17,7 +17,7 @@
 "mark": {
     "type": "line",
     "interpolate": "monotone",
-    "color": "darkred"
+    "color": "orange"
   },
   "encoding": {
     "x": {"field": "date", "type": "temporal", "axis": {"labelAngle": 0, "grid": false}, "title": "Date"},
