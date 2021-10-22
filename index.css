@@ -7,32 +7,40 @@ body{
 
 h1{
 
-    color: rgb(6, 6, 6);
-     font-family: 'Nunito', sans-serif;
+    color: rgb(14, 0, 0);
+    font-family: 'Nunito', sans-serif ;
+}
+
+h2{
+
+    color: rgb(74, 19, 85);
+    font-family: 'Nunito', sans-serif ;
 }
 
 h3{
-    color: #751575;
-    font-family: 'Nunito', sans-serif;
+    color: #f445f4;
+    font-family: 'Nunito', sans-serif ;
 }
 
 p{font-family: 'Nunito', sans-serif;
-color: rgb(20, 2, 2);
+color: rgb(63, 25, 25);
 }
 
 
 
 .chart{
-    width: 330p;
+    width: 400px;
+    position: relative;
     border-width: 10px;
     background-color: white;
     border-style: solid;
     border-radius: 5px;
     border-color: white;
-    margin: auto;
+    margin: 25px 50px 20px 10px;
 
 
 }
+
 
 
 
