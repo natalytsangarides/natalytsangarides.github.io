@@ -111,7 +111,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart5', myChart5);
   </script>
 </div> 
-   
+  
+     <h3>BitCoin Price Charts</h3>
     <p>The chart looks at Daily BTC price in USD</p>
     <!-- Crypto Chart: In-line JSON data -->
 <div class="chart" id="Chart6">
@@ -127,6 +128,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <script>
     var myChart7 = "chartcrypto2.json";
     vegaEmbed('#Chart7', myChart7);
+  </script>
+</div>
+    
+    <h3>FRED data charts</h3>
+    <p>The chart looks at US government spending on education, using own API</p>
+    <!-- Education chart, FRED -->
+<div class="chart" id="Chart8">
+  <script>
+    var myChart8 = "educationfred.json";
+    vegaEmbed('#Chart8', myChart8);
+  </script>
+</div>
+    
+    <p>The chart looks at Real Median Household Income in the United States, using own API</p>
+    <!-- Median Household Income chart, FRED -->
+<div class="chart" id="Chart9">
+  <script>
+    var myChart9 = "incomefred.json";
+    vegaEmbed('#Chart9', myChart9);
   </script>
 </div>
     
