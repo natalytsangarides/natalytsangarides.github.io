@@ -20,7 +20,7 @@
   
   "data": {
     "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/data_FRED-LNS11300002.json",
-    "format": {"type": "json"}
+    "format": {"property": "observations"}
     },
   
 
