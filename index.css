@@ -44,8 +44,8 @@ color: rgb(63, 25, 25);
 }
 
 .bcontainer {
-    display: table;
-    flex-flow: row-reverse nowrap;
+     display: flex;
+    flex-flow: row wrap;
     justify-content: center;;
     gap: 30px 30px;
     margin-top: 30px;
