@@ -7,6 +7,7 @@
     <title>Nataly Tsangarides</title>
 
     <link rel="stylesheet" href= "index.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
         </style>
@@ -33,7 +34,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+<div class="w3-main" style="margin-left:10%">
 
   <!-- Header -->
   <header id="portfolio">
@@ -57,7 +58,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 1</p>
     <div style="display:none;" id="myDiv" class="animate-bottom">
  
- 
+      <container class="bcontainer"> 
     </div>
     <h3>Covid-19</h3>
 
@@ -70,9 +71,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart1', myChart1);
   </script>
 </div>
-</container>
 
-  <h3>Productivity puzzle</h3>
+
+  <h3>Productivity chart</h3>
 
   <p>The chart looks at productivity in the UK</p>
 <!--CHART 2 -->
@@ -94,8 +95,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart3', myChart3);
   </script>
 </div>
+</container>
     
 <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 2</p>
+
+  <container class="bcontainer">
     <h3>UK Coronavirus Data Charts</h3>
 
   <p>The chart looks at new coronavirus cases in the UK, using API</p>
@@ -115,9 +119,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart5', myChart5);
   </script>
 </div> 
+</container>
   
 
 <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 3</p>
+  <container class="bcontainer">
      <h3>BitCoin Price Charts</h3>
     <p>The chart looks at Daily BTC price in USD</p>
     <!-- Crypto Chart: In-line JSON data -->
@@ -136,8 +142,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart7', myChart7);
   </script>
 </div>
+</container>
    
 <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 4</p>
+  <container class="bcontainer">
     <h3>FRED data charts</h3>
     <p>The chart looks at US government spending on education, using own API</p>
     <!-- Education chart, FRED -->
@@ -156,9 +164,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart9', myChart9);
   </script>
 </div>
+</container>
  
 <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 5</p>
-     <h3>Four charts using loops</h3>
+  <container class="bcontainer">
+     <h3>Four charts using Python loops</h3>
     <!-- Education chart raw, FRED -->
 <div class="chart" id="Chart10">
   <script>
@@ -190,8 +200,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart13', myChart13);
   </script>
 </div>
+</container>
     
     <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 7</p>
+      <container class="bcontainer">
     <h3>Educational attainment per state</h3>
     <p>The chart was made by scraping data from Wikipedia, using python pandas</p>
      <!-- Education, wiki -->
@@ -201,7 +213,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     vegaEmbed('#Chart14', myChart14);
   </script>
 </div>
-   
+</container>
     
 </body>
 
