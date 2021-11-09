@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "Percentage of people with a Bachelor's diploma",
+    "subtitle":"Source: Wikipedia",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+ 
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/my_csv1.csv",
+    "format": {"type":"csv"}
+    },
+  
+
+  "height": 300,
+  "width": 280,
+  
+
+ "mark": "point",
+
+  "encoding": {
+    "x": {
+      "field": "state",
+      "type": "nominal",
+      "axis": {"grid": false},
+        "title": "State"
+      
+      },
+
+    "y": {
+      "field": "BSC percentage",
+       "type": "nominal",
+        "title": "Percentage",
+        "sort": {"encoding": "y", "order": "descending"},
+        "axis": {"grid": false}
+      }
+  
+  }
+  }
