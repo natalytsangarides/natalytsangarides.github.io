@@ -27,8 +27,13 @@
   "height": 300,
   "width": 280,
   
+"mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "linear",
+    "color":"#871f91"
+  },
 
- "mark": {"type": "line", "point": false},
 
   "encoding": {
     "x": {
