@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppinswght@300&family=Poppins:wght@600");
-
 body {
-    background-color: #ece8f0 ;
-    max-width: 20%;
-    margin: auto;
+    background-color: #e6e5e7 ;
+    max-width: 200px;
+   
 }
 
 .bodyText {
@@ -27,21 +25,21 @@ h1{
     color: rgb(8, 7, 7);
     font-family: 'Poppins', ;
     font-size: 40px;
-    margin-top: 10px;
-    margin-left: 30%;
+    margin-top: 0px;
     font-weight: bold;
 }
 
 h2{
 
-    color: rgb(74, 19, 85);
-    margin-left: 30%;
+    color: rgb(49, 6, 40);
+    margin-top: -20px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif ;
 }
 
 h3{
-    color: #f445f4;
-    margin-left: 30%;
+    color: #403568;
+    margin-top: 25px;
     font-family: 'Poppins', sans-serif ;
 }
 
@@ -53,23 +51,26 @@ color: rgb(63, 25, 25);
 
 .chart{
     width: auto;
-    position: relative;
+    
+    position:static;
     border-width: 1px;
     background-color: white;
     border-style: solid;
     border-radius: 10px;
     border-color: rgb(20, 19, 19);
-    margin: 25px 50px 20px 10px;
+    margin: 5% 0;
     
+
 
 }
 
 .bcontainer {
-    display: table;
+    display: block;
     box-align: center;;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 30px 30px;
     margin-top: 20px;
+    width: fit-content;
     border-style: solid;
     border-color: rgb(37, 34, 34);
     padding: 10px;
