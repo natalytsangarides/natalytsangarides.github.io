@@ -8,9 +8,6 @@
 
     <link rel="stylesheet" href= "index.css">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-        </style>
 
         <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
@@ -19,224 +16,246 @@
 
 </head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body {
+  margin: 0;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #6b2c61;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: rgb(10, 0, 0);
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 130%;
+  margin-bottom: 5%;
+  font-weight: 550;
+}
+
+li a.active {
+  background-color: #863e86;
+  color: rgb(253, 253, 253);
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(170, 47, 170);
+  color: white;
+}
 </style>
-<body class="w3-light-grey w3-content" style="max-width:50%">
-
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:3%">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-    <h1><b>Data Science</b></h1>
-    <h2><b>by Nataly Tsangarides</b></h2>
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Menu:</span> 
-      <button class="w3-button w3-black" onclick="location.href='index.html'">Portfolio</button>
-      <button class="w3-button w3-white" onclick="location.href='project.html'">Project</button>
-      <button class="w3-button w3-white w3-hide-small"onclick="location.href='https://github.com/NatalyTsangarides/NatalyTsangarides.github.io'">Github</button>
-      <button class="w3-button w3-white w3-hide-small"onclick="location.href='https://rapidcharts.io/datascience'">Course</button>
-    </div>
-    </div>
-  </header>
+</head>
 
 
 <body>
-    <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 1</p>
-    <div style="display:none;" id="myDiv" class="animate-bottom">
-  </div>
+
+  
+<ul>
+  
+  <li><a class="active" href="index.html">Portfolio</a></li>
+  <li><a href="project.html">Project</a></li>
+  <li><a href="https://github.com/NatalyTsangarides/NatalyTsangarides.github.io">Github</a></li>
+  <li><a href="https://rapidcharts.io/datascience">Course</a></li>
+</ul>
+
+<div style="margin-top:0px;margin-left:150%;padding:1px 16px;height:1000px;width:800px;">
+
+  <h1><b>Data Science</b></h1>
+  <h2><b>by Nataly Tsangarides</b></h2>
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700; font-size:25px;">Week 1</p>
+   
+
+  
     
-       
-    <h3>Covid-19</h3>
+      
+         
+  <h3>Covid-19</h3>
 <container class="bcontainer"> 
-    <p>The chart tracks Covid-19 cases by UK region.</p>
+  <p>The chart tracks Covid-19 cases by UK region.</p>
 
 <!--CHART 1-->
 <div class="chart" id="Chart1">
-  <script>
-    var myChart1 = "chart1_covidUKRegions.json";
-    vegaEmbed('#Chart1', myChart1);
-  </script>
+<script>
+  var myChart1 = "chart1_covidUKRegions.json";
+  vegaEmbed('#Chart1', myChart1);
+</script>
 </div>
-  </container>         
+</container>         
 
 
-  <h3>Productivity chart</h3>
+<h3>Productivity chart</h3>
 <container class="bcontainer">
-  <p>The chart looks at productivity in the UK</p>
-     
+<p>The chart looks at productivity in the UK</p>
+   
 <!--CHART 2 -->
 <div class="chart" id="Chart2">
-  <script>
-    var myChart2 = "chart2_ukProductivity.json";
-    vegaEmbed('#Chart2', myChart2);
-  </script>
+<script>
+  var myChart2 = "chart2_ukProductivity.json";
+  vegaEmbed('#Chart2', myChart2);
+</script>
 </div>
 </container>
-    
-   
-    <h3>Environment Chart</h3>
+  
+ 
+  <h3>Environment Chart</h3>
 <container class="bcontainer"> 
-  <p>The chart looks at UK CO2 emissions, by sector</p>
-        
+<p>The chart looks at UK CO2 emissions, by sector</p>
+      
 <!--CHART 3 -->
 <div class="chart" id="Chart3">
-  <script>
-    var myChart3 = "chartENV10.json";
-    vegaEmbed('#Chart3', myChart3);
-  </script>
+<script>
+  var myChart3 = "chartENV10.json";
+  vegaEmbed('#Chart3', myChart3);
+</script>
 </div>
 </container>
-    
-<p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 2</p>
-
   
-    <h3>UK Coronavirus Data Charts</h3>
- <container class="bcontainer">
-  <p>The chart looks at new coronavirus cases in the UK, using API</p>
-   
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 2</p>
+
+
+  <h3>UK Coronavirus Data Charts</h3>
+<container class="bcontainer">
+<p>The chart looks at new coronavirus cases in the UK, using API</p>
+ 
 <!--CHART 4 -->
 <div class="chart" id="Chart4">
-  <script>
-    var myChart4 = "chart_Week2CovidCases.json";
-    vegaEmbed('#Chart4', myChart4);
-  </script>
-    </div> 
-      </container>
-    
-    <container class="bcontainer">
-      <p>The chart looks at new coronavirus cases in the UK, using own data</p>
-    
-    <!--CHART 5 -->
-    <div class="chart" id="Chart5">
-  <script>
-    var myChart5 = "newcasesCSV.json";
-    vegaEmbed('#Chart5', myChart5);
-  </script>
+<script>
+  var myChart4 = "chart_Week2CovidCases.json";
+  vegaEmbed('#Chart4', myChart4);
+</script>
+  </div> 
+    </container>
+  
+  <container class="bcontainer">
+    <p>The chart looks at new coronavirus cases in the UK, using own data</p>
+  
+  <!--CHART 5 -->
+  <div class="chart" id="Chart5">
+<script>
+  var myChart5 = "newcasesCSV.json";
+  vegaEmbed('#Chart5', myChart5);
+</script>
 </div> 
 </container>
-  
 
-<p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 3</p>
- 
-     <h3>BitCoin Price Charts</h3>
-    <container class="bcontainer">
-    <p>The chart looks at Daily BTC price in USD</p>
-     
-    <!-- Crypto Chart: In-line JSON data -->
+
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 3</p>
+
+   <h3>BitCoin Price Charts</h3>
+  <container class="bcontainer">
+  <p>The chart looks at Daily BTC price in USD</p>
+   
+  <!-- Crypto Chart: In-line JSON data -->
 <div class="chart" id="Chart6">
-  <script>
-    var myChart6 = "chartcrypto.json";
-    vegaEmbed('#Chart6', myChart6);
-  </script>
+<script>
+  var myChart6 = "chartcrypto.json";
+  vegaEmbed('#Chart6', myChart6);
+</script>
 </div>
-   </container>      
+ </container>      
 <container class="bcontainer">
-    <p>The chart looks at Daily BTC price in USD, updated manually</p>
-    
+  <p>The chart looks at Daily BTC price in USD, updated manually</p>
+  
 <!-- Crypto Chart: Data from CSV, updated manually -->
 <div class="chart" id="Chart7">
-  <script>
-    var myChart7 = "chartcrypto2.json";
-    vegaEmbed('#Chart7', myChart7);
-  </script>
+<script>
+  var myChart7 = "chartcrypto2.json";
+  vegaEmbed('#Chart7', myChart7);
+</script>
 </div>
-     </container>   
+   </container>   
 
-   
-<p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 4</p>
-  
-    <h3>FRED data charts</h3>
-      <container class="bcontainer">
-    <p>The chart looks at US government spending on education, using own API</p>
-      
-    <!-- Education chart, FRED -->
-<div class="chart" id="Chart8">
-  <script>
-    var myChart8 = "educationfred.json";
-    vegaEmbed('#Chart8', myChart8);
-  </script>
-</div>
-         
-    
-    <p>The chart looks at Real Median Household Income in the United States, using own API</p>
-   
-    <!-- Median Household Income chart, FRED -->
-<div class="chart" id="Chart9">
-  <script>
-    var myChart9 = "incomefred.json";
-    vegaEmbed('#Chart9', myChart9);
-  </script>
-</div>
-</container>
  
-<p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 5</p>
- 
-     <h3>Four charts using Python loops</h3>
-     <container class="bcontainer">
-    <!-- Education chart raw, FRED -->
-<div class="chart" id="Chart10">
-  <script>
-    var myChart10 = "charteducation.json";
-    vegaEmbed('#Chart10', myChart10);
-  </script>
-</div>
-    
-    <!-- Race chart raw, FRED -->
-<div class="chart" id="Chart11">
-  <script>
-    var myChart11 = "chartrace.json";
-    vegaEmbed('#Chart11', myChart11);
-  </script>
-</div>
-    
-     <!-- Women chart raw, FRED -->
-<div class="chart" id="Chart12">
-  <script>
-    var myChart12 = "chartwomen.json";
-    vegaEmbed('#Chart12', myChart12);
-  </script>
-</div>
-    
-    <!-- Income chart raw, FRED -->
-<div class="chart" id="Chart13">
-  <script>
-    var myChart13 = "chartincome.json";
-    vegaEmbed('#Chart13', myChart13);
-  </script>
-</div>
-</container>
-    
-    <p class="bodyText"><span style="color: rgb(148, 64, 130); font-weight: 700;">Week 7</p>
-      
-    <h3>Educational attainment per state</h3>
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 4</p>
+
+  <h3>FRED data charts</h3>
     <container class="bcontainer">
-    <p>The chart was made by scraping data from Wikipedia, using python pandas</p>
+  <p>The chart looks at US government spending on education, using own API</p>
     
-     <!-- Education, wiki -->
-<div class="chart" id="Chart14">
-  <script>
-    var myChart14 = "wikieducation.json";
-    vegaEmbed('#Chart14', myChart14);
-  </script>
+  <!-- Education chart, FRED -->
+<div class="chart" id="Chart8">
+<script>
+  var myChart8 = "educationfred.json";
+  vegaEmbed('#Chart8', myChart8);
+</script>
+</div>
+       
+  
+  <p>The chart looks at Real Median Household Income in the United States, using own API</p>
+ 
+  <!-- Median Household Income chart, FRED -->
+<div class="chart" id="Chart9">
+<script>
+  var myChart9 = "incomefred.json";
+  vegaEmbed('#Chart9', myChart9);
+</script>
 </div>
 </container>
+
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 5</p>
+
+   <h3>Four charts using Python loops</h3>
+   <container class="bcontainer">
+  <!-- Education chart raw, FRED -->
+<div class="chart" id="Chart10">
+<script>
+  var myChart10 = "charteducation.json";
+  vegaEmbed('#Chart10', myChart10);
+</script>
+</div>
+  
+  <!-- Race chart raw, FRED -->
+<div class="chart" id="Chart11">
+<script>
+  var myChart11 = "chartrace.json";
+  vegaEmbed('#Chart11', myChart11);
+</script>
+</div>
+  
+   <!-- Women chart raw, FRED -->
+<div class="chart" id="Chart12">
+<script>
+  var myChart12 = "chartwomen.json";
+  vegaEmbed('#Chart12', myChart12);
+</script>
+</div>
+  
+  <!-- Income chart raw, FRED -->
+<div class="chart" id="Chart13">
+<script>
+  var myChart13 = "chartincome.json";
+  vegaEmbed('#Chart13', myChart13);
+</script>
+</div>
+</container>
+  
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 7</p>
     
+  <h3>Educational attainment per state</h3>
+  <container class="bcontainer">
+  <p>The chart was made by scraping data from Wikipedia, using python pandas</p>
+  
+   <!-- Education, wiki -->
+<div class="chart" id="Chart14">
+<script>
+  var myChart14 = "wikieducation.json";
+  vegaEmbed('#Chart14', myChart14);
+</script>
+</div>
+</container>
+
+</div> 
+  
 </body>
 
 
 </html>
-
