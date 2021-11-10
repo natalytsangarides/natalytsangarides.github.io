@@ -64,17 +64,6 @@ color: rgb(63, 25, 25);
 
 }
 
-.bcontainer {
-    display: block;
-    box-align: center;;
-    flex-wrap: nowrap;
-    gap: 30px 30px;
-    margin-top: 20px;
-    width: fit-content;
-    border-style: solid;
-    border-color: rgb(37, 34, 34);
-    padding: 10px;
-    border-radius: 25px;
-  }
+
 
 
