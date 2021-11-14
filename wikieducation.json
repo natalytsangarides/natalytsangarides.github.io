@@ -28,7 +28,10 @@
   "width": 280,
   
 
- "mark": "point",
+ "mark":{
+     "type": "bar",
+     "width":15
+     },
 
   "encoding": {
     "x": {
@@ -41,11 +44,19 @@
 
     "y": {
       "field": "BSC percentage",
-       "type": "nominal",
+       "type": "quantitative",
         "title": "Percentage",
         "sort": {"encoding": "y", "order": "descending"},
         "axis": {"grid": false}
+    },
+        "color": {
+      "field": "state",
+      "type": "nominal",
+      "legend":"",
+      "scale": {
+        "range": "category"
       }
+    }
   
   }
   }
