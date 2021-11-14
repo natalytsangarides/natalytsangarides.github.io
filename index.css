@@ -52,7 +52,7 @@ color: rgb(63, 25, 25);
 
 
 .chart{
-   width: auto;
+   width: 100%;
     position:static;
     border-width: 1px;
     background-color: white;
