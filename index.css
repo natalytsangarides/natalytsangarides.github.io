@@ -65,6 +65,228 @@ color: rgb(63, 25, 25);
 
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color:purple;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(10, 0, 0);
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 130%;
+    margin-bottom: 5%;
+    font-weight: 550;
+  }
+  
+  li a.active {
+    background-color: #520d52;
+    color: rgb(253, 253, 253);
+  }
+  
+  li a:hover:not(.active) {
+    background-color: rgb(170, 47, 170);
+    color: white;
+  }
+  @-webkit-keyframes edit {
+    0% {
+      -webkit-transform: rotate(-12deg);
+      transform: rotate(-12deg);
+    }
+  
+    8% {
+      -webkit-transform: rotate(12deg);
+      transform: rotate(12deg);
+    }
+  
+    10% {
+      -webkit-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    18% {
+      -webkit-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    20% {
+      -webkit-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    28% {
+      -webkit-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    30% {
+      -webkit-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    38% {
+      -webkit-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    40% {
+      -webkit-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    48% {
+      -webkit-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    50% {
+      -webkit-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    58% {
+      -webkit-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    60% {
+      -webkit-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    68% {
+      -webkit-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    75% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes edit {
+    0% {
+      -webkit-transform: rotate(-12deg);
+      -ms-transform: rotate(-12deg);
+      transform: rotate(-12deg);
+    }
+  
+    8% {
+      -webkit-transform: rotate(12deg);
+      -ms-transform: rotate(12deg);
+      transform: rotate(12deg);
+    }
+  
+    10% {
+      -webkit-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    18% {
+      -webkit-transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    20% {
+      -webkit-transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    28% {
+      -webkit-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    30% {
+      -webkit-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    38% {
+      -webkit-transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    40% {
+      -webkit-transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    48% {
+      -webkit-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    50% {
+      -webkit-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    58% {
+      -webkit-transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    60% {
+      -webkit-transform: rotate(-24deg);
+      -ms-transform: rotate(-24deg);
+      transform: rotate(-24deg);
+    }
+  
+    68% {
+      -webkit-transform: rotate(24deg);
+      -ms-transform: rotate(24deg);
+      transform: rotate(24deg);
+    }
+  
+    75% {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+  
+  .faa-edit.animated,
+  .faa-edit.animated-hover:hover,
+  .faa-parent.animated-hover:hover > .faa-edit {
+    -webkit-animation: edit 5s ease infinite;
+    animation: edit 5s ease infinite;
+  }
+
+  .faa-github.animated,
+  .faa-github.animated-hover:hover,
+  .faa-parent.animated-hover:hover > .faa-github {
+    -webkit-animation: edit 5s ease infinite;
+    animation: edit 5s ease infinite;
+  }
+
+  .faa-book.animated,
+  .faa-book.animated-hover:hover,
+  .faa-parent.animated-hover:hover > .faa-book {
+    -webkit-animation: edit 5s ease infinite;
+    animation: edit 5s ease infinite;
+  }
+
+  
+
 
 
 
