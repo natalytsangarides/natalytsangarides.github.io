@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "Reported Covid-19 deaths in countries led by women were lower than those led by men",
+    "subtitle":"Source: The Guardian, JHU",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+       
+ "repeat": ["Country1", "Country2", "Country3"],
+  "columns": 3,
+  
+  "spec": {
+"data": {
+    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/femaleleader.csv",
+    "format": {"type":"csv"}
+    },
+  
+
+  "height": 200,
+  "width": 200,
+
+ "mark":{
+     "type": "bar",
+     "width":45
+     },
+      
+  "encoding": {
+    "x": {
+      "field": {"repeat": "repeat"},
+      "bin": false,
+      "type": "nominal",
+      "axis": {"grid": false},
+        "title": ""
+      
+      },
+
+    "y": {
+      "field": "Deaths100K",
+       "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}
+    },
+        "color": {
+      "field": {"repeat": "repeat"},
+      "type": "nominal",
+      "legend":"",
+      "scale": {
+        "range": "category"
+      }
+    }
+  
+  }
+  }}
