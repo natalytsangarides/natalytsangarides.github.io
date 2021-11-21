@@ -1,0 +1,76 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+
+   "title": {
+    "text": "Population with a bachelor's degree or higher",
+    "subtitle":"Source: FRED, Own calculations",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+ 
+  "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/educationaverage.csv",
+  "format": {
+      "type": "csv",
+      "parse": {
+        "RED": "number",
+        "BLUE": "number"
+      }
+    }
+  },
+
+  "width": 350,
+  "height": 300,
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+          "opacity": 0.6,
+        "color": "red"
+      },
+    
+  "transform": [
+    {
+      "density": "RED",
+      "extent": [15, 50]
+    }
+  ],
+
+  
+
+  "encoding": {
+    "x": {"field": "value", "title": "", "type": "quantitative",
+     "axis": {"grid": false}, "scale": {"domain": [18,42]}},
+    "y": {"field": "density", "type": "quantitative", "title": null,
+     "axis": {"grid": false}}
+  }
+},
+{
+      "mark": {
+        "type": "area",
+          "opacity": 0.6,
+        "color": "blue"
+      },
+  
+  "transform": [
+    {
+      "density": "BLUE",
+      "extent": [15, 50]
+    }
+  ],
+
+  "encoding": {
+    "x": {"field": "value", "title": "", "type": "quantitative"},
+    "y": {"field": "density", "type": "quantitative"}
+  }
+}
+
+]
+}
