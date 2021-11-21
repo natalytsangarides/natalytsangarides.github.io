@@ -16,49 +16,53 @@
     "background":"#ffffff",
     "view": {
       "stroke": "transparent"}},
-       
- "repeat": ["Country1", "Country2", "Country3"],
+  "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/femaleleader.csv"},
   "columns": 3,
-  
-  "spec": {
-"data": {
-    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/femaleleader.csv",
-    "format": {"type":"csv"}
-    },
-  
-
-  "height": 200,
-  "width": 200,
-
- "mark":{
+  "concat": [
+    {
+        "height": 200,
+  "width": 250,
+      "mark":{
      "type": "bar",
      "width":45
      },
-      
-  "encoding": {
-    "x": {
-      "field": {"repeat": "repeat"},
-      "bin": false,
-      "type": "nominal",
-      "axis": {"grid": false},
-        "title": ""
-      
-      },
-
-    "y": {
-      "field": "Deaths100K",
-       "type": "quantitative",
-        "title": "",
-        "axis": {"grid": false}
-    },
-        "color": {
-      "field": {"repeat": "repeat"},
-      "type": "nominal",
-      "legend":"",
-      "scale": {
-        "range": "category"
+      "encoding": {
+        "x": { "field": "Country1", "type": "nominal", "title": "New Zealand and Ireland have populations of less than 5m","axis": {
+          "labelAngle": ""}},
+        "y": {"field": "Deaths100K1", "type": "quantitative", "title": "Deaths per 100K population"},
+        "color": {"field": "Country3", "type": "nominal", "legend": null}
       }
-    }
+    },
+    {
+       "height": 200,
+  "width": 250,
+      "mark":{
+     "type": "bar",
+     "width":45
+     },
+      "encoding": {
+        "x": {"field": "Country2", "type": "nominal", "title": "Germany and the UK were paired together for comparison","axis": {
+          "labelAngle": ""}, "sort": "descending"},
+        "y": { "field": "Deaths100k2", "type": "quantitative", "title": ""},
+        "color": {"field": "Country3", "type": "nominal", "legend": null}
+      }
+    },
+    {
+     "height": 200,
+  "width": 250,
+      "mark":{
+     "type": "bar",
+     "width":45
+     },
+      "encoding": {
+        "x": {"field": "Country3", "type": "nominal", "title": "Bangladesh and Pakistan have populations of 150m+",
+        "axis": {
+          "labelAngle": ""}},
+        "y": { "field": "Deaths100K3", "type": "quantitative", "title": ""},
+        "color": {"field": "Country3", "type": "nominal", "legend": null, 
+        "scale": {"range": ["darkorange", "teal"]}}
+      }
   
-  }
-  }}
+    }
+  ]
+}
