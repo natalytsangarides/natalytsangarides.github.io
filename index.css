@@ -65,6 +65,13 @@ color: rgb(63, 25, 25);
 
 }
 
+sidebar {
+  float: left;
+}
+main {
+  overflow: hidden;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
