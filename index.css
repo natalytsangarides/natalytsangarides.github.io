@@ -99,7 +99,7 @@ body {
 	float: none !important; 
 }
 
-.button {
+.button,buttonActive {
   border: 2px solid rgb(187, 39, 180);
   color: rgb(116, 18, 99);
   font-family: 'Raleway', sans-serif;
@@ -119,13 +119,12 @@ body {
   text-align: center;
   text-overflow: ellipsis;
   transition: border-color,background-color .3s ease;
- 
-  
+ }
+
+.buttonActive {
+	color: #2d1247;
+  background-color: rgb(141, 22, 131) !important;
 }
-
-
-  
-
 
 @-webkit-keyframes edit {
   0% {
