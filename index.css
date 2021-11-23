@@ -99,7 +99,7 @@ body {
 	float: none !important; 
 }
 
-.button,buttonActive {
+.button, .buttonActive {
   border: 2px solid rgb(187, 39, 180);
   color: rgb(116, 18, 99);
   font-family: 'Raleway', sans-serif;
