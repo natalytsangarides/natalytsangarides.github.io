@@ -123,6 +123,7 @@ body {
 
 .buttonActive {
 	color: #2d1247;
+	color: rgb(253, 249, 252) !important;
   background-color: rgb(141, 22, 131) !important;
 }
 
