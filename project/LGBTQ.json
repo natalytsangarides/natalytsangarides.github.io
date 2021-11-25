@@ -4,7 +4,7 @@
   "description": "",
 
    "title": {
-    "text": "Percentage of same-sex households",
+    "text": "Percentage of Same-Sex Couple Households",
     "subtitle":"Source: US Census Bureau, Own calculations",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
@@ -26,7 +26,7 @@
     "type": "circle",
     "opacity": 0.8,
     "stroke": "black",
-    "strokeWidth": 1
+    "strokeWidth": 0.8
   },
   "encoding": {
     "x": {
@@ -42,6 +42,8 @@
       "legend": {"clipHeight": 30},
       "scale": {"rangeMax": 2500}
     },
-    "color": {"field": "State", "type": "nominal", "legend": null}
+      "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "rainbow"}},
+    "tooltip": {"field": "Percentage", "type": "nominal"}
+
   }
 }
