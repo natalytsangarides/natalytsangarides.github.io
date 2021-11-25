@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "Percentage of same-sex households",
+    "subtitle":"Source: US Census Bureau, Own calculations",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/LGBTQ.csv"
+  },
+  "width": 600,
+  "height": 400,
+  
+  "mark": {
+    "type": "circle",
+    "opacity": 0.8,
+    "stroke": "black",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "axis": {"grid": false}
+    },
+    "y": {"field": "State", "type": "nominal", "axis": {"title": ""}},
+    "size": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "",
+      "legend": {"clipHeight": 30},
+      "scale": {"rangeMax": 2500}
+    },
+    "color": {"field": "State", "type": "nominal", "legend": null}
+  }
+}
