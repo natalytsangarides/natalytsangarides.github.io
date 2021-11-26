@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "Diversity Index",
+    "subtitle":"Source: Census 2010, Census 2020",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+
+ "data": {
+    "values": [
+      {"State": "Alabama", "2010": 48.1, "2020":53.1}, 
+      {"State": "California", "2010": 67.7, "2020":69.7},
+      {"State": "New York", "2010": 60.2, "2020":65.8},
+      {"State": "Texas", "2010": 63.8, "2020": 67},
+      {"State": "Washington", "2010": 45.4, "2020":55.9},  
+      {"State": "Wyoming", "2010": 25.4, "2020":32.4}  
+    ]
+  },
+  "repeat": {"layer": ["2010", "2020"]},
+  "spec": {
+    "mark":{
+     "type": "bar",
+     "width":33
+     },
+    "width":500,
+    "encoding": {
+      "x": {
+        "field": "State",
+        "axis": {
+          "labelAngle": ""},
+        "type": "nominal"
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Diversity Index"
+      },
+      "color": {"datum": {"repeat": "layer"}, "title": "Year", "scale": {"scheme": "magma"}},
+      "xOffset": {"datum": {"repeat": "layer"}}
+    }
+  },
+  "config": {
+    "mark": {"invalid": null}
+  }
+}
