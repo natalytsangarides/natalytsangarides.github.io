@@ -60,6 +60,12 @@ color: rgb(63, 25, 25);
 
 }
 
+.chart:hover {
+  transform: scale(1.03, 1.03);
+  transition: 0.6s;
+  
+}
+
 p {
 	font-size: 16px;
 	margin: 5px 5px;
