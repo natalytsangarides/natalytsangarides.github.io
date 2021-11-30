@@ -1,15 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {
-    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/geoMap%20(1).csv"
-  },
-  "width": "container",
-  "title": {
+
+  "description": "",
+
+   "title": {
     "text": "Fox News Listenership Correlation with Republican Vote",
     "subtitle": "Fox news data from google analytics 2016-2020, Election Results 2020",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":11,
-    "subtitleColor":"#c55c15"
+     "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+  
+  "data": {
+    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/geoMap%20(1).csv"
   },
 
   "transform": [
