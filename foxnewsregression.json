@@ -4,8 +4,8 @@
   "description": "",
 
    "title": {
-    "text": "Fox News Listenership Correlation with Republican Vote",
-    "subtitle": "Fox news data from google analytics 2016-2020, Election Results 2020",
+    "text": "Fox News Listenership Correlation with Republican Vote By US State",
+    "subtitle": "Fox news data from google analytics 2016-2020, US Election Results 2020",
      "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
