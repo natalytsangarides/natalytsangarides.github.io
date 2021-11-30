@@ -30,7 +30,8 @@
         "x": { "field": "Country1", "type": "nominal", "title": "","axis": {
           "labelAngle": ""}},
         "y": {"field": "Deaths100K1", "type": "quantitative", "title": "Deaths per 100K population"},
-        "color": {"field": "Country3", "type": "nominal", "legend": null}
+        "color": {"field": "Country3", "type": "nominal", "legend": null},
+        "tooltip": {"field": "Deaths100K1", "type": "quantitative"}
       }
     },
     {
@@ -61,7 +62,8 @@
           "labelAngle": ""}},
         "y": { "field": "Deaths100K3", "type": "quantitative", "title": ""},
         "color": {"field": "Country3", "type": "nominal", "legend": null, 
-        "scale": {"range": ["darkorange", "teal"]}}
+        "scale": {"range": ["darkorange", "teal"]},
+        "tooltip": {"field": "Deaths100K3", "type": "quantitative"}}
       }
   
     }
