@@ -25,6 +25,9 @@
     {"calculate": "100*datum.Repvote", "as": "republican"},
     {"calculate": "100*datum.FoxNews", "as": "fox"}
     ],
+  
+  "width":400,
+  "height":300,
 
   "layer": [
     {
