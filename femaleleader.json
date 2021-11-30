@@ -45,7 +45,7 @@
           "labelAngle": ""}, "sort": "descending"},
         "y": { "field": "Deaths100k2", "type": "quantitative", "title": ""},
         "color": {"field": "Country3", "type": "nominal", "legend": null},
-         "tooltip": {"field": "Deaths100K2", "type": "quantitative"}
+         "tooltip": {"field": "Deaths100k2", "type": "quantitative"}
       }
     },
     {
