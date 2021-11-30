@@ -33,7 +33,7 @@
         "y": {
           "field": "fox",
           "type": "quantitative",
-          "scale": {"domain": [30,75]},
+          "scale": {"domain": [30,70]},
           "title": "% of Fox News listenership"
         },
          "tooltip": {"field": "State", "type": "ordinal"}
