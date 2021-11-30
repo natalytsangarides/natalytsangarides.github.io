@@ -1,0 +1,87 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/geoMap%20(1).csv"
+  },
+  "width": "container",
+  "title": {
+    "text": "Fox News Listenership Correlation with Republican Vote",
+    "subtitle": "Fox news data from google analytics 2016-2020, Election Results 2020",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":11,
+    "subtitleColor":"#c55c15"
+  },
+
+  "transform": [
+    {"calculate": "100*datum.Repvote", "as": "republican"},
+    {"calculate": "100*datum.FoxNews", "as": "fox"}
+    ],
+
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "filled": true
+      },
+      "encoding": {
+        "x": {
+          "field": "republican",
+          "type": "quantitative",
+         "scale": {"domain": [30,70]},
+         "title": "% of Republican votes"
+        },
+        "y": {
+          "field": "fox",
+          "type": "quantitative",
+          "scale": {"domain": [30,75]},
+          "title": "% of Fox News listenership"
+        },
+         "tooltip": {"field": "State", "type": "ordinal"}
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "firebrick"
+      },
+      "transform": [
+        {
+          "regression": "republican",
+          "on": "fox"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "republican",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "fox",
+          "type": "quantitative"
+        },
+         "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "dark2"}},
+    "tooltip": {"field": "State", "type": "ordinal"}
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "republican",
+          "on": "fox",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "firebrick",
+        "x": "width",
+        "align": "right",
+        "y": -10
+      },
+      "encoding": {
+        "text": {"type": "nominal", "field": "R2"}
+      }
+    }
+  ]
+}
