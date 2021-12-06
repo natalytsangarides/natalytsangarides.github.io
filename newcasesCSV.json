@@ -50,7 +50,7 @@
       "color": {
         "field": "areaName",
         "type": "nominal",
-        "scale": {"scheme": "oranges"},
+        "scale": {"scheme": "tableau20"},
         "title": "Region",
         "legend": {
           "orient": "top-left", 
