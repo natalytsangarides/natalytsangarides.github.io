@@ -41,7 +41,7 @@
       },
   
       "y": {
-        "field": "newCasesByPublishDateRollingRate",
+        "field": "cumCasesByPublishDate",
         "type": "quantitative",
         "title": null,
         "axis": {"grid": false}
