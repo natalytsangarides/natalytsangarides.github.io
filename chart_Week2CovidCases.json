@@ -1,4 +1,4 @@
-  {
+ {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "description": "",
@@ -27,7 +27,7 @@
         
         {"filter": {
           "field": "areaName", 
-          "oneOf": ["Reading", "South Cambridgeshire", "East Riding of Yorkshire"]}
+          "oneOf": ["Gwynedd", "Scottish Borders", "Moray"]}
           }
   
   
@@ -42,6 +42,7 @@
     "encoding": {
   
       "x": {
+        "timeUnit": "yearmonthdate",
         "field": "date",
         "type": "temporal",
         "title": null,
@@ -58,7 +59,7 @@
       "color": {
         "field": "areaName",
         "type": "nominal",
-        "scale": {"scheme": "oranges"},
+        "scale": {"scheme": "tableau20"},
         "title": "Region",
         "legend": {
           "orient": "top-left", 
