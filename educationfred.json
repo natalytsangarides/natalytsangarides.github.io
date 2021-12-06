@@ -1,50 +1,35 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-
   "description": "",
-
-   "title": {
+  "title": {
     "text": "Government current expenditures: Education",
-    "subtitle":"Source: FRED",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":10,
+    "subtitle": "Source: FRED",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
     "anchor": "start",
     "color": "#000000",
-    "subtitleColor":"#c55c15"},
-
-  "config": {
-    "background":"#ffffff",
-    "view": {
-      "stroke": "transparent"}},
- 
-  
+    "subtitleColor": "#c55c15"
+  },
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
   "data": {
-    "url": "https://api.stlouisfed.org/fred/series/observations?series_id=G160291A027NBEA&api_key=ca67d012cdea3ef2d6b7ee335cb5fdc9&file_type=json",
-    "format": {"type": "json"}
-    },
-  
-
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DG160291A027NBEA%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
+    "format": {"type": "json", "property": "observations"}
+  },
   "height": 300,
   "width": 280,
-  
-
- "mark": {"type": "line", "point": false},
-
+  "mark": {"type": "line", "point": false, "color":"teal"},
   "encoding": {
     "x": {
       "field": "date",
       "type": "temporal",
       "axis": {"grid": false},
-        "title": "Date"
-      
-      },
-
+      "title": "Date"
+    },
     "y": {
       "field": "value",
-       "type": "quantitative",
-        "title": "Value",
-        "axis": {"grid": false}
-      }
-  
+      "type": "quantitative",
+      "title": "Value",
+      "axis": {"grid": false}
+    }
   }
-  }
+}
