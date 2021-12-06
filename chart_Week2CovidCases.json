@@ -1,14 +1,22 @@
-{
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    
-    "title": {
-      "text": "New Covid Cases, Rolling Rate",
-      "subtitle":"By Publish Date",
-      "subtitleFontStyle":"italic",
-      "subtitleFontSize":10,
-      "anchor": "start",
-      "color": "black"
-    },
+  {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "New Covid Cases",
+    "subtitle":"By Publish Date",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"#ffffff",
+    "view": {
+      "stroke": "transparent"}},
+ 
     
      "data": {
       "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=cumCasesByPublishDate&format=csv",
