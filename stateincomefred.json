@@ -1,0 +1,193 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "",
+  "title": {
+    "text": "Real Median Household Income",
+    "subtitle": "Source: FRED",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor": "#c55c15"
+  },
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "layer": [
+    {
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSNYA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
+    "format": {"type": "json", "property": "observations"}
+  },
+
+  "height": 400,
+  "width": 550,
+  "mark": {"type": "line", "point": false, "color":"red","clip": true},
+  "encoding": {
+     "x": {
+      "timeUnit":"year",
+      "field": "date",
+      "type": "temporal",
+      "axis": {"grid": false},
+      "title": "",
+      "scale": {"domain": [2000,2020]}
+      
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [35000,85000]}
+    }
+  }},
+  {
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSCAA646N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {"type": "line", "point": false, "color":"blue","clip": true},
+  "selection": {
+    "State": {
+      "type": "single",
+      "fields": ["Name"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "New York",
+          "Alabama",
+          "Texas",
+          "Wyoming",
+          "Washington"
+        ],
+        "name": "Pick a state:"
+      }
+    }
+  },
+  "encoding": {
+     "x": {
+      "timeUnit":"year",
+      "field": "date",
+      "type": "temporal",
+      "axis": {"grid": false},
+      "title": "",
+      "scale": {"domain": [2000,2020]}
+      
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [35000,80000]}
+    }
+  }},
+  {
+    "data": {
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSWAA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {"type": "line", "point": false, "color":"green","clip": true},
+  "encoding": {
+     "x": {
+      "timeUnit":"year",
+      "field": "date",
+      "type": "temporal",
+      "axis": {"grid": false},
+      "title": "",
+      "scale": {"domain": [2000,2020]}
+      
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [35000,80000]}
+    }
+  }
+},
+{ "data": {
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSTXA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {"type": "line", "point": false, "color":"orange","clip": true},
+  "encoding": {
+     "x": {
+      "timeUnit":"year",
+      "field": "date",
+      "type": "temporal",
+      "axis": {"grid": false},
+      "title": "",
+      "scale": {"domain": [2000,2020]}
+      
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [35000,80000]}
+    }
+  }
+},
+{ "data": {
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSWYA646N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {"type": "line", "point": false, "color":"purple","clip": true},
+  "encoding": {
+     "x": {
+      "timeUnit":"year",
+      "field": "date",
+      "type": "temporal",
+      "axis": {"grid": false},
+      "title": "",
+      "scale": {"domain": [2000,2020]}
+      
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [35000,80000]}
+    }
+  }
+},
+{ "data": {
+    "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSALA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "mark": {"type": "line", "point": false, "color":"lightblue","clip": true},
+  "encoding": {
+    "x": {
+      "timeUnit":"year",
+      "field": "date",
+      "type": "temporal",
+      "axis": {"grid": false},
+      "title": "",
+      "scale": {"domain": [2000,2020]}
+      
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": "",
+      "axis": {"grid": false},
+      "scale": {"domain": [35000,80000]}
+    },
+     "color": {
+      "field": "title_type",
+      "scale": {
+        "domain": ["New York", "Alabama", "Texas", "California", "Wyoming", "Washington"],
+        "range": ["red", "lightblue", "orange", "blue", "purple", "green"]
+      },
+      "legend": {
+        "labelExpr": "datum.label == 'New York' ? 'New York' : datum.label == 'Alabama' ? 'Alabama' :datum.label == 'Texas' ? 'Texas' :datum.label == 'Wyoming' ? 'Wyoming' :datum.label == 'Washington' ? 'Washington' : 'California'"
+      },
+      "title": "State"
+    }
+  }
+}
+]
+}
