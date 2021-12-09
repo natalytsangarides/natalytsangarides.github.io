@@ -10,7 +10,7 @@
     "color": "#000000",
     "subtitleColor": "#c55c15"
   },
-  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "config": {"background": "rgb(250, 243, 250)", "view": {"stroke": "transparent"}},
   "data": {
     "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
     "format": {"type": "json", "property": "observations"}
