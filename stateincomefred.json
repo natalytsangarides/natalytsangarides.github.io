@@ -10,7 +10,7 @@
     "color": "#000000",
     "subtitleColor": "#c55c15"
   },
-  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "config": {"background": "rgb(250, 243, 250)", "view": {"stroke": "transparent"}},
   "width": 400,
   "height": 300,
   "layer": [{
