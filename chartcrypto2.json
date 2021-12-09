@@ -6,6 +6,12 @@
   "anchor": "start",
   "color": "#1378a3" 
   },
+  
+  "config": {
+    "background":"rgb(250, 243, 250)",
+    "view": {
+      "stroke": "transparent"}},
+  
 
   "width":290,
   "height":300,
