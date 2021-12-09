@@ -62,7 +62,7 @@
         "title": "Region",
         "legend": {
           "orient": "top-left", 
-          "fillColor": "#FcFdFd"}
+          "fillColor": "rgb(250, 243, 250)"}
       }
   }
   }
