@@ -14,8 +14,11 @@
     "anchor": "start",
     "color": "black"
   },
-
-
+   
+   "config": {
+    "background":"rgb(250, 243, 250)",
+    "view": {
+      "stroke": "transparent"}},
 
   "height": 300,
   
