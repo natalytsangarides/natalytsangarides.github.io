@@ -11,7 +11,10 @@
     "subtitleColor": "#c55c15"
   },
   "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
-  "layer": [
+  "width": 400,
+  "height": 300,
+  "layer": [{
+    "layer": [
     {
   "data": {
     "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSNYA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
@@ -75,4 +78,123 @@
     "y":{"field":"value", "type":"quantitative","title":"", "scale": {"domain": [20000,85000]}},
     "color": {"field":"State", "type":"nominal"}
   }  
- }
+ },
+ {
+ "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "color": {
+          "type": "nominal",
+          "field": "State"
+        },
+        "x": {
+          "type": "temporal",
+          "field": "date"
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "value"
+        }
+      }
+    },
+    {
+      "mark": "point",
+      "encoding": {
+        "opacity": {
+          "value": 0
+        },
+        "x": {
+          "type": "temporal",
+          "field": "date"
+        }
+      },
+      "selection": {
+        "tooltip": {
+          "type": "single",
+          "nearest": true,
+          "on": "mouseover",
+          "fields": [
+            "date"
+          ],
+          "empty": "none",
+          "resolve": "global"
+        }
+      }
+    },
+    {
+      "mark": "point",
+      "encoding": {
+        "color": {
+          "type": "nominal",
+          "field": "State"
+        },
+        "opacity": {
+          "condition": {
+            "selection": "tooltip",
+            "value": 1
+          },
+          "value": 0
+        },
+        "x": {
+          "type": "temporal",
+          "field": "date"
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "value"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "gray"
+      },
+      "encoding": {
+        "x": {
+          "type": "temporal",
+          "field": "date"
+        }
+      },
+      "transform": [
+        {
+          "filter": {
+            "selection": "tooltip"
+          }
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "dy": -5
+      },
+      "encoding": {
+        "color": {
+          "type": "nominal",
+          "field": "State"
+        },
+        "text": {
+          "condition": {
+            "type": "quantitative",
+            "field": "value",
+            "selection": "tooltip"
+          },
+          "value": " "
+        },
+        "x": {
+          "type": "temporal",
+          "field": "date"
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "value"
+        }
+      }
+    }
+  ]}
+  ]
+}
