@@ -59,7 +59,7 @@
       "color": {
         "field": "areaName",
         "type": "nominal",
-        "scale": {"scheme": "tableau20"},
+        "scale": {"scheme": "plasma"},
         "title": "Region",
         "legend": {
           "orient": "top-left", 
