@@ -24,7 +24,7 @@
     "type": "line",
     "point": false,
     "interpolate": "monotone",
-    "color": "blueviolet"
+    "color": "purple"
   },
   "encoding": {
     "x": {
