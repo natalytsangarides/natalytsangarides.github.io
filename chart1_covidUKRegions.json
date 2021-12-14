@@ -75,7 +75,7 @@
       "field": "areaName",
       "type": "nominal",
       "legend": null,
-      "scale": {"scheme": "inferno"}
+      "scale": {"scheme": "magma"}
     }
   }
 }
