@@ -53,10 +53,8 @@
       "field": "state",
       "type": "nominal",
       "legend":"",
-      "scale": {
-        "range": "category"
+      "scale":{"scheme":"plasma"}
       }
     }
   
-  }
   }
