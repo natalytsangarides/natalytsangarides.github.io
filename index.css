@@ -90,7 +90,11 @@ p {
 
 
 body {
-  background-color: rgb(250, 243, 250);;
+  background-color: rgb(250, 243, 250);
+    max-width: auto;
+    margin: auto;
+    text-align: center;
+    width: 100%;
  }
 
 
