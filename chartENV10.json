@@ -67,7 +67,7 @@
       "field": "Value",
       "title": null,
       "type": "quantitative",
-      "xxscale": {"domain": [0,900]},
+      "scale": {"domain": [0,900]},
       "axis": {"grid": false}
       
     },
@@ -77,7 +77,7 @@
       "legend": {
         "orient": "top-right",
         "columns":2},
-      "scale": {"scheme": "yellowgreenblue"
+      "scale": {"scheme": "plasma"
       },
       "title": null
     },
@@ -93,3 +93,4 @@
     ]
   }
 }
+  
