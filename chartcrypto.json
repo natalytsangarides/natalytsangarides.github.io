@@ -31,7 +31,7 @@
   "type": "line",
   "point": false,
   "interpolate": "linear",
-  "color":"#blueviolet"
+  "color":"blueviolet"
 },
 
 
