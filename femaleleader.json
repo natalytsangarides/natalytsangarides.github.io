@@ -62,7 +62,7 @@
           "labelAngle": ""}},
         "y": { "field": "Deaths100K3", "type": "quantitative", "title": ""},
         "color": {"field": "Country3", "type": "nominal", "legend": null, 
-        "scale": {"range": ["darkorange", "teal"]}},
+        "scale": {"range": ["darkorange", "purple"]}},
         "tooltip": {"field": "Deaths100K3", "type": "quantitative"}
                  
       }
