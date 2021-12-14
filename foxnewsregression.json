@@ -48,6 +48,7 @@
           "scale": {"domain": [30,70]},
           "title": "% of Fox News listenership"
         },
+        "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "plasma"}},
          "tooltip": {"field": "State", "type": "ordinal"}
       }
     },
@@ -71,7 +72,7 @@
           "field": "fox",
           "type": "quantitative"
         },
-         "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "dark2"}},
+         "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "plasma"}},
     "tooltip": {"field": "State", "type": "ordinal"}
       }
     },
