@@ -16,7 +16,7 @@
     "view": {
     "stroke": "transparent"},
 
-  "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/statistic_id221454_share-of-religious-americans-in-2017-by-state%20(1).csv"},
+  "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/religiondata.csv"},
   "params": [{
     "name": "Type",
     "select": {"type": "point", "fields": ["Type"]},
