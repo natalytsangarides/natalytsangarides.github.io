@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "description": "",
+  "description": "This is an interactive legend graph. Click on a legend element to select it and highlight it on the graph",
 
    "title": {
     "text": "Religiosity in the United States in 2017, by state",
@@ -11,11 +11,10 @@
     "anchor": "start",
     "color": "#000000",
     "subtitleColor":"#c55c15"},
-
     
-      "background": "rgb(250, 243, 250)",
+   "background": "rgb(250, 243, 250)",
     "view": {
-      "stroke": "transparent"},
+    "stroke": "transparent"},
 
   "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/statistic_id221454_share-of-religious-americans-in-2017-by-state%20(1).csv"},
   "params": [{
