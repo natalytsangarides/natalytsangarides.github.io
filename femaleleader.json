@@ -61,12 +61,11 @@
         "axis": {
           "labelAngle": ""}},
         "y": { "field": "Deaths100K3", "type": "quantitative", "title": ""},
-        "color": {"field": "Country3", "type": "nominal", "legend": null, 
-        "scale": {"range": ["darkorange", "purple"]}},
+        "color": {"field": "Country3", "type": "nominal", "legend": null, "scale": {"scheme": "magma"}}},
         "tooltip": {"field": "Deaths100K3", "type": "quantitative"}
                  
       }
   
-    }
+    
   ]
 }
