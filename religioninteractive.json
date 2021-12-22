@@ -1,0 +1,41 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "Religiosity in the United States in 2017, by state",
+    "subtitle":"Source: Statista",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+    
+      "background": "rgb(250, 243, 250)",
+    "view": {
+      "stroke": "transparent"},
+
+  "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/statistic_id221454_share-of-religious-americans-in-2017-by-state%20(1).csv"},
+  "params": [{
+    "name": "Type",
+    "select": {"type": "point", "fields": ["Type"]},
+    "bind": "legend"
+  }],
+ "mark":{
+     "type": "bar",
+     "height": 25
+     },
+    "width":300,
+    "height": 200,
+  "encoding": {
+    "x": {"aggregate": "sum", "field": "Value", "title":null, "sort":"descending"},
+    "y": {"field": "State", "title": null},
+    "color": {"field": "Type", "title": "Religiosity", "scale": {"scheme": "plasma"}},
+     "opacity": {
+      "condition": {"param": "Type", "value": 1},
+      "value": 0.2
+    }
+  }
+  }
