@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
 
   "description": "This is an interactive legend graph. Click on a legend element to select it and highlight it on the graph",
 
