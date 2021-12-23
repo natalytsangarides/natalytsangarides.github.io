@@ -1,5 +1,5 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
   "description": "This is an interactive legend graph. Click on a legend element to select it and highlight it on the graph",
 
@@ -15,8 +15,10 @@
    "background": "rgb(250, 243, 250)",
     "view": {
     "stroke": "transparent"},
-
-  "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/religiondata.csv"},
+   "data": {
+    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/religiondata.csv",
+    "format": {"type":"csv"}
+    },
   "params": [{
     "name": "Type",
     "select": {"type": "point", "fields": ["Type"]},
