@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "Average Annual Wage",
+    "subtitle":"Source: OECD",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+  "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/wages.csv"},
+  
+  
+  "height": 300,
+  "width": 300,
+
+  "encoding": {
+    "x": {"field": "TIME", "type": "temporal", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"}},
+    "y": {"field": "Value", "type": "quantitative", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"},
+    "scale":{"domain":[2000,70000]}},
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field":"Country",
+        "type":"nominal",
+        "scale":{"scheme":"plasma"}
+      },
+      "value": "grey"
+    },
+    "opacity": {
+      "condition": {
+        "param": "hover",
+        "value": 1
+      },
+      "value": 0.2
+    },
+    "tooltip": [
+      {"field": "Country"},{"field": "Value", "title":"Average Annual Wage"}
+    ]
+  },
+
+  "layer": [{
+    "params": [{
+      "name": "hover",
+      "value": [{"Country": "Germany"}],
+      "select": {
+        "type": "point",
+        "fields": ["Country"],
+        "on": "mouseover"
+      }
+    }],
+    "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+  }, 
+  {
+    "mark": "line"
+  }, {
+    "encoding": {
+      "x": {"aggregate": "max", "field": "TIME"},
+      "y": {"aggregate": {"argmax": "date"}, "field": "price"}
+    },
+    "layer": [{
+      "mark": {"type": "circle"}
+    }, {
+      "mark": {"type": "text", "align": "left", "dx": 4},
+      "encoding": {"text": {"field":"symbol", "type": "nominal"}}
+    }]
+  }],
+
+
+  "config": {"view": {"stroke": null}, "background": "rgb(250, 243, 250)"}
+}
