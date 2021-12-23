@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "background": "rgb(250, 243, 250)",
+    "view": {
+    "stroke": "transparent"},
+  "data": {
+    "values": [
+      {"Race": "Hispanics", "Percentage": 18.5},
+      {"Race": "White, alone", "Percentage": 76.3},
+      {"Race": "African American", "Percentage": 13.4},
+      {"Race": "Asian", "Percentage": 5.9},
+      {"Race": "Two or more races", "Percentage": 2.8},
+      {"Race": "American Indian", "Percentage": 1.3},
+      {"Race": "Native Hawaiian", "Percentage": 0.2}
+    ]
+  },
+  "params": [{
+    "name": "Race",
+    "select": {"type": "point", "fields": ["Race"]},
+    "bind": "legend"
+  }],
+  "mark": {"type": "arc", "innerRadius": 40},
+  "encoding": {
+    "theta": {"field": "Percentage", "type": "quantitative","sort":"descending"},
+    "color": {"field": "Race", "type": "nominal", "scale":{"scheme":"plasma"}, "title":"Race and Hispanic Origin"},
+    "opacity": {
+      "condition": {"param": "Race", "value": 1},
+      "value": 0.2},
+       "tooltip":[{"field":"Race", "type":"nominal"},{"field":"Percentage", "type":"quantitative"}]
+  }
+ 
+}
