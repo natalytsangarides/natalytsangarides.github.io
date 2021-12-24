@@ -97,7 +97,7 @@ body {
   <container class="hcontainer">
 
 
-  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700; font-size:25px;">Week 1</p>
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700; font-size:25px;">Week 1: Embedding</p>
          
   <h3>Covid-19</h3>
 
@@ -145,7 +145,7 @@ body {
 
   <container class="hcontainer">
   
-<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 2</p>
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 2: Hosting Data</p>
 
 
   <h3>UK Coronavirus Data Charts</h3>
@@ -178,11 +178,11 @@ body {
 
     <container class="hcontainer">
 
-<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 3</p>
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 3: Editing Data</p>
 
    <h3>BitCoin Price Charts</h3>
   
-  <p>The chart looks at Daily BTC price in USD</p>
+  <p>The chart uses an in-line JSON list as its data source</p>
    
   <!-- Crypto Chart: In-line JSON data -->
 <div class="chart" id="Chart6">
@@ -193,7 +193,7 @@ body {
 </div>
      
 
-  <p>The chart looks at Daily BTC price in USD, updated manually</p>
+  <p>The chart uses observations that were edited manually</p>
   
 <!-- Crypto Chart: Data from CSV, updated manually -->
 <div class="chart" id="Chart7">
@@ -209,7 +209,7 @@ body {
 
       <container class="hcontainer">
  
-<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 4</p>
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 4: API driven charts</p>
 
   <h3>FRED data charts</h3>
           
@@ -241,7 +241,7 @@ body {
 
           <container class="hcontainer">
 
-<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 5</p>
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 5: Loops and APIs</p>
 
    <h3>Four charts using Python loops</h3>
    
@@ -283,7 +283,7 @@ body {
             <container class="hcontainer">
 
   
-  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 7</p>
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 7: Scrapers</p>
     
   <h3>Educational attainment per state</h3>
  
@@ -302,7 +302,7 @@ body {
 
               <container class="hcontainer">
 
-     <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 8</p>
+     <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 8: Data Stories</p>
     
   <h3>Female-led countries handled coronavirus better</h3>
  
@@ -325,7 +325,7 @@ body {
   <container class="hcontainer">
 
   
-  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 9</p>
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 9: Advanced Analytics</p>
     
   <h3>Fox News and Republican Voting</h3>
  
@@ -344,11 +344,11 @@ body {
   <container class="hcontainer">
 
   
-  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 10</p>
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 10: Interactivity</p>
     
   <h3>Average Annual Wage</h3>
  
-  <p>The line chart includes an interactive highlight and a tooltip.</p>
+  <p>The chart includes an interactive highlight and a tooltip</p>
   
    <!-- Wage -->
 <div class="chart" id="Chart17">
@@ -357,6 +357,19 @@ body {
   vegaEmbed('#Chart17', myChart17);
 </script>
 </div>
+
+<h3>Race distribution in the US</h3>
+ 
+  <p>The chart includes an interactive legend and a tooltip</p>
+  
+   <!-- Race -->
+<div class="chart" id="Chart18">
+<script>
+  var myChart18 = "donut.json";
+  vegaEmbed('#Chart18', myChart18);
+</script>
+</div>      
+      
     </container> 
 
 
