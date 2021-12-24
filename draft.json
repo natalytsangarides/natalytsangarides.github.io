@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {
+    "text": "COVID-19 Cases: UK upper tier local authority",
+    "subtitle": "New cases by publish date, rolling rate",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "description": "Coronavirus cases",
+  "data": {
+    "url": "https://raw.githubusercontent.com/georgeloizouu/GeorgeLoizouData.github.io/main/utla_2021-10-14.csv",
+    "format": {"type": "csv"}
+  },
+  "height": 287,
+  "width": 300,
+  "mark": {"type": "line", "width": 10},
+  "selection": {
+    "Region": {
+      "type": "single",
+      "fields": ["areaName"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Bristol, City of",
+          "Liverpool",
+          "Hounslow",
+          "Bolton",
+          "Bradford",
+          "Powys",
+          "Worcestershire",
+          "Redcar and Cleveland",
+          "Cheshire West and Chester",
+          "Barnsley",
+          "Wolverhampton",
+          "Wandsworth",
+          "Westminster",
+          "Na h-Eileanan Siar",
+          "South Lanarkshire",
+          "East Dunbartonshire"
+        ],
+        "name": "Pick an area: "
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "areaName",
+        "oneOf": [
+          "Bristol, City of",
+          "Liverpool",
+          "Hounslow",
+          "Bolton",
+          "Bradford",
+          "Powys",
+          "Worcestershire",
+          "Redcar and Cleveland",
+          "Cheshire West and Chester",
+          "Barnsley",
+          "Wolverhampton",
+          "Wandsworth",
+          "Westminster",
+          "Na h-Eileanan Siar",
+          "South Lanarkshire",
+          "East Dunbartonshire"
+        ]
+      }
+    },
+    {"filter": {"selection": "Region"}},
+    {
+      "filter": {
+        "field": "date",
+        "range": [
+          {"year": 2020, "month": "dec", "date": 5},
+          {"year": 2050, "month": "dec", "date": 30}
+        ]
+      }
+    }
+  ],
+  "encoding": {
+    "x": {"field": "date", "type": "temporal", "title": null},
+    "y": {
+      "field": "newCasesByPublishDateRollingRate",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [0, 1700]}
+    },
+    "color": {
+      "field": "areaName",
+      "type": "nominal",
+      "legend": null,
+      "scale": {"scheme": "inferno"}
+    }
+  },
+  "config": {}
+}
