@@ -5,7 +5,7 @@
 
    "title": {
     "text": "Average Annual Wage",
-    "subtitle":"Source: OECD",
+    "subtitle":"Source: OECD, Rebased, 2000=100.",
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
@@ -14,10 +14,11 @@
   "height": 300,
   "width": 300,
   "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/wages.csv"},
+
    "encoding": {
     "x": {"field": "TIME", "type": "temporal", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"}},
     "y": {"field": "Value", "type": "quantitative", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"},
-    "scale":{"domain":[2000,70000]}},
+    "scale":{"domain":[90,170]}},
     "color": {
       "condition": {
         "param": "hover",
@@ -27,7 +28,7 @@
       },
       "value": "grey"
     },
-    "tooltip":[{"field":"Country"},{"field":"Value"}],
+    "tooltip":[{"field":"Country"},{"field":"Wage"}],
     "opacity": {
       "condition": {
         "param": "hover",
@@ -56,7 +57,7 @@
       "y": {"aggregate": {"argmax": "TIME"}, "field": "Value"}
     },
     "layer": [{
-      "mark": {"type": "circle"}
+      "mark": {"type": "line"}
     }]
   }],
    "config": {"view": {"stroke": null}, "background": "rgb(250, 243, 250)"}
