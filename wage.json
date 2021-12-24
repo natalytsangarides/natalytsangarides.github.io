@@ -27,6 +27,7 @@
       },
       "value": "grey"
     },
+    "tooltip":[{"field":"Country"},{"field":"Value"}],
     "opacity": {
       "condition": {
         "param": "hover",
