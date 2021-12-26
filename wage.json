@@ -23,12 +23,49 @@
    "height": 300,
   "width": 300,
 
-  "mark":{
-     "type": "line"},
-
    "encoding": {
-    "x": {"field": "Time", "type": "temporal", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"}},
+    "x": {"field": "TIME", "type": "temporal", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"}},
     "y": {"field": "Value", "type": "quantitative", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"},
-    "scale":{"domain":[90,170]}}
-  }
+    "scale":{"domain":[90,170]}},
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field":"Country",
+        "type":"nominal",
+        "scale":{"scheme":"plasma"}
+      },
+      "value": "grey"
+    },
+    "tooltip":[{"field":"Country"},{"field":"Wage"}],
+    "opacity": {
+      "condition": {
+        "param": "hover",
+        "value": 1
+      },
+      "value": 0.2
+    }
+  },
+  "layer": [{
+    "description": "transparent layer to make it easier to trigger selection",
+    "params": [{
+      "name": "hover",
+      "value": [{"Country": "Germany"}],
+      "select": {
+        "type": "point",
+        "fields": ["Country"],
+        "on": "mouseover"
+      }
+    }],
+    "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+  }, {
+    "mark": "line"
+  }, {
+    "encoding": {
+      "x": {"aggregate": "max", "field": "TIME"},
+      "y": {"aggregate": {"argmax": "TIME"}, "field": "Value"}
+    },
+    "layer": [{
+      "mark": {"type": "line"}
+    }]
+  }]
 }
