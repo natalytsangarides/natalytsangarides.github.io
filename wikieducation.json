@@ -30,15 +30,15 @@
 
  "mark":{
      "type": "bar",
-     "width":15
+     "width":30
      },
 
   "encoding": {
     "x": {
       "field": "state",
       "type": "nominal",
-      "axis": {"grid": false},
-        "title": "State"
+      "axis": {"grid": false, "labelAngle":30},
+        "title": null
 
       },
 
