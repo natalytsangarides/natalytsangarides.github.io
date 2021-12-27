@@ -49,7 +49,7 @@
   "encoding": {
     "x": {"field": "State", "type": "ordinal","axis": {"labelAngle":20},"title":null},
     "y": {"field": "Percentage", "type": "quantitative","title":null},
-    "color": {"field":"State", "type":"nominal","scale":{"scheme":"plasma"}},
+    "color": {"field":"State", "type":"nominal","legend":null,"scale":{"scheme":"plasma"}},
     "fillOpacity": {
       "condition": {"param": "select", "value": 1},
       "value": 0.3
