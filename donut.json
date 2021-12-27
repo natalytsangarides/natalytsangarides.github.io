@@ -25,19 +25,41 @@
       {"Race": "Native Hawaiian", "Percentage": 0.2}
     ]
   },
-  "params": [{
-    "name": "Race",
-    "select": {"type": "point", "fields": ["Race"]},
-    "bind": "legend"
-  }],
+  "params": [
+    {
+      "name": "highlight",
+      "select": {"type": "point", "on": "mouseover"}
+    },
+    {"name": "select", "select": "point"}
+  ],
   "mark": {"type": "arc", "innerRadius": 40},
   "encoding": {
     "theta": {"field": "Percentage", "type": "quantitative","sort":"descending"},
     "color": {"field": "Race", "type": "nominal", "scale":{"scheme":"plasma"}, "title":"Race and Hispanic Origin"},
-    "opacity": {
-      "condition": {"param": "Race", "value": 1},
-      "value": 0.2},
-       "tooltip":[{"field":"Race", "type":"nominal"},{"field":"Percentage", "type":"quantitative"}]
+    "tooltip":[{"field":"Race"},{"field":"Percentage"}],
+    "fillOpacity": {
+      "condition": {"param": "select", "value": 1},
+      "value": 0.3
+    },
+    "strokeWidth": {
+      "condition": [
+        {
+          "param": "select",
+          "empty": false,
+          "value": 2
+        },
+        {
+          "param": "highlight",
+          "empty": false,
+          "value": 1
+        }
+      ],
+      "value": 0
+    }
+  },
+  "config": {
+    "scale": {
+      "bandPaddingInner": 0.2
+    }
   }
- 
 }
