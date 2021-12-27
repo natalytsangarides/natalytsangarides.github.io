@@ -49,6 +49,7 @@
   "encoding": {
     "x": {"field": "State", "type": "ordinal","axis": {"labelAngle":20},"title":null},
     "y": {"field": "Percentage", "type": "quantitative","title":null},
+    "tooltip":[{"field":"Percentage"},{"field":"Immigrants"}],
     "color": {"field":"State", "type":"nominal","legend":null,"scale":{"scheme":"plasma"}},
     "fillOpacity": {
       "condition": {"param": "select", "value": 1},
