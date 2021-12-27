@@ -23,6 +23,32 @@
    "height": 300,
   "width": 300,
 
+   "transform": [
+  {"calculate": "year(datum.TIME)", "as": "year"},
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}],
+
+"params": [    
+      {"name":"minYear", "value":2000,
+         "bind":{
+           "input": "range",
+           "min": 2000, 
+           "max": 2019, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 2001, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
+
+
    "encoding": {
     "x": {"field": "TIME", "type": "temporal", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"}},
     "y": {"field": "Value", "type": "quantitative", "title": "", "axis":{"grid": true, "gridColor": "darkgrey"},
