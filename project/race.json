@@ -21,10 +21,11 @@
   "encoding": {
     "facet": {
       "field": "State",
+      "title":null,
       "type": "ordinal",
       "columns": 3
     },
     "theta": {"field": "Value", "type": "quantitative"},
-    "color": {"field": "Race", "sort":"descending", "type": "nominal", "scale":{"scheme":"plasma"}}
+    "color": {"field": "Race", "sort":"descending", "type": "nominal", "scale":{"scheme":"plasma"}, "title":"Race and Ethnicity"}
   }
 }
