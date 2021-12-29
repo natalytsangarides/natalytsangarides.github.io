@@ -6,21 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nataly Tsangarides</title>
 
-    <link rel="stylesheet" href= "index.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-        </style>
+    <link rel="stylesheet" href= "project.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
         <!--The next three lines allow the Vega embed-->
 <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    
+    <!--Favicon-->
+<link rel="icon" href="icon.png">
+
+
 
 </head>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  margin: 0;
+  text-align: center !important;
+}
+
+</style>
+
+<div id="loader">
+  <div id="one"></div>
+  <div id="two"></div>
+</div>
+
+<div id="loadermessage">Loading...</div>
+
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 3000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loadermessage").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+
+
+
 <body>
-    <h1>Nataly Tsangarides: Project</h1>
+
   
+ 
+
+<div style="margin-top:-10px;text-align:center !important;padding:1px 16px;">
+
+ <header>
+ 
+  
+  <container class="hcontainer">
+
+  <h1>Data<span style="color:purple">Science</span></h1></span>
+
+  <h2><b>by Nataly Tsangarides</b> </h2>
+
+  <p>
+    <a class="button" href="index.html"><i class="fas fa-chart-bar faa-chart-bar animated-hover fa-4x" style="font-size: 1em;"></i> Portfolio</a>
+    <a class="buttonActive" href="project.html"><i class="fas fa-edit"></i> Project</a> 
+    <a class="button" href="https://github.com/NatalyTsangarides/NatalyTsangarides.github.io"><i class="fab fa-github faa-github animated-hover fa-4x" style="font-size: 1em;"></i> Github</a> 
+    <a class="button" href="https://rapidcharts.io/datascience"><i class="fas fa-book faa-book animated-hover fa-4x" style="font-size: 1em;"></i> Course</a>
+  </p>
+
+</container>
+</div> 
+</header>
 </body>
-  
 </html>
