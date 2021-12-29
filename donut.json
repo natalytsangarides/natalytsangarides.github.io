@@ -11,9 +11,12 @@
     "anchor": "start",
     "color": "#000000",
     "subtitleColor":"#c55c15"},
-  "background": "rgb(250, 243, 250)",
+
+ "config": {
+    "background":"rgb(250, 243, 250)",
     "view": {
-    "stroke": "transparent"},
+      "stroke": "transparent"}},
+
   "data": {
     "values": [
       {"Race": "Hispanics", "Percentage": 18.5},
@@ -34,8 +37,8 @@
   ],
   "mark": {"type": "arc", "innerRadius": 40},
   "encoding": {
-    "theta": {"field": "Percentage", "type": "quantitative","sort":"descending"},
-    "color": {"field": "Race", "type": "nominal", "scale":{"scheme":"plasma"}, "title":"Race and Hispanic Origin"},
+    "theta": {"field": "Percentage", "type": "quantitative"},
+    "color": {"field": "Race", "type": "nominal", "scale":{"scheme":"plasma"}, "sort":"descending", "title":"Race and Hispanic Origin"},
     "tooltip":[{"field":"Race"},{"field":"Percentage"}],
     "fillOpacity": {
       "condition": {"param": "select", "value": 1},
@@ -55,11 +58,6 @@
         }
       ],
       "value": 0
-    }
-  },
-  "config": {
-    "scale": {
-      "bandPaddingInner": 0.2
     }
   }
 }
