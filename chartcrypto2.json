@@ -27,6 +27,13 @@
     "type": "line",
     "color": "purple"
   },
+
+  "transform": [
+    {"calculate": "year(datum.date)", "as": "year"},
+    {"filter": "datum.year>=minYear"},
+    {"filter": "datum.year<=maxYear"}
+],
+
   "params": [
     {
       "name": "minYear",
@@ -34,18 +41,18 @@
       "bind": {
         "input": "range",
         "min": 2016,
-        "max": 2021,
+        "max": 2020,
         "step": 1,
         "name": "Start year:"
       }
     },
     {
       "name": "maxYear",
-      "value": 2021,
+      "value": 2020,
       "bind": {
         "input": "range",
         "min": 2016,
-        "max": 2021,
+        "max": 2020,
         "step": 1,
         "name": "End year:"
       }
