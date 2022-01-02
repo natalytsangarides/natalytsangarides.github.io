@@ -13,14 +13,14 @@
     "subtitleColor":"#c55c15"},
 
   "config": {
-    "background":"#ffffff",
+    "background":"rgb(250, 243, 250)",
     "view": {
       "stroke": "transparent"}},
   "data": {
     "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/LGBTQ.csv"
   },
-  "width": 600,
-  "height": 400,
+  "width": 500,
+  "height": 300,
   
   "mark": {
     "type": "circle",
@@ -42,7 +42,7 @@
       "legend": {"clipHeight": 30},
       "scale": {"rangeMax": 2500}
     },
-      "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "rainbow"}},
+      "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "plasma"}},
     "tooltip": {"field": "Percentage", "type": "nominal"}
 
   }
