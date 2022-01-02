@@ -11,10 +11,9 @@
     "subtitleColor": "#c55c15"
   },
   "config": {"background": "rgb(250, 243, 250)", "view": {"stroke": "transparent"}},
-  "width": 370,
+  "width": 400,
   "height": 300,
-  "layer": [
-    {
+  "layer": [{
   "data": {
     "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSNYA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
     "format": {"type": "json", "property": "observations"}
@@ -22,8 +21,32 @@
 
   "transform": [{
     "calculate":"'New York'", "as":"State"
-  }],
-  "mark": {"type": "line", "point": false,"clip": true}
+  }, {
+    "calculate":"datum.value", "as":"Real Median Income"
+  },
+  {"calculate":"year(datum.date)", "as": "year"}, {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}],
+
+"params": [    
+      {"name":"minYear", "value":1984,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
+  "mark": {"type": "line", "point": false, "color":"red","clip": true}
   },
   {
   "data": {
@@ -32,8 +55,31 @@
   },
    "transform": [{
     "calculate":"'California'", "as":"State"
-  }],
-  "mark": {"type": "line", "point": false,"clip": true}
+  }, {
+    "calculate":"datum.value", "as":"Real Median Income"
+  },{"calculate":"year(datum.date)", "as": "year"}, {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}],
+
+"params": [    
+      {"name":"minYear", "value":1984,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
+  "mark": {"type": "line", "point": false, "color":"blue","clip": true}
   },
   {
     "data": {
@@ -43,23 +89,96 @@
   ,
    "transform": [{
     "calculate":"'Washington'", "as":"State"
-  }],
-  "mark": {"type": "line", "point": false,"clip": true}},
+  }, {
+    "calculate":"datum.value", "as":"Real Median Income"
+  },
+  {"calculate":"year(datum.date)", "as": "year"}, {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}],
+
+"params": [    
+      {"name":"minYear", "value":1984,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
+  "mark": {"type": "line", "point": false, "color":"green","clip": true}},
   { "data": {
     "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSTXA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
     "format": {"type": "json", "property": "observations"}
   },
   "transform": [{
     "calculate":"'Texas'", "as":"State"
-  }],
-  "mark": {"type": "line", "point": false,"clip": true}},
+  }, {
+    "calculate":"datum.value", "as":"Real Median Income"
+  },
+  {"calculate":"year(datum.date)", "as": "year"}, {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}],
+
+"params": [    
+      {"name":"minYear", "value":1984,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
+  "mark": {"type": "line", "point": false, "color":"orange","clip": true}},
   { "data": {
     "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSWYA646N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
     "format": {"type": "json", "property": "observations"}
   },
   "transform": [{
     "calculate":"'Wyoming'", "as":"State"
-  }],
+  },
+   {
+    "calculate":"datum.value", "as":"Real Median Income"
+  },{"calculate":"year(datum.date)", "as": "year"},
+   {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}],
+
+"params": [    
+      {"name":"minYear", "value":1984,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
   "mark": {"type": "line", "point": false, "color":"purple","clip": true}},
   { "data": {
     "url": "https://api.allorigins.win/raw?url=https%3A%2F%2Fapi.stlouisfed.org%2Ffred%2Fseries%2Fobservations%3Fseries_id%3DMEHOINUSALA672N%26api_key%3Dca67d012cdea3ef2d6b7ee335cb5fdc9%26file_type%3Djson",
@@ -67,15 +186,66 @@
   },
   "transform": [{
     "calculate":"'Alabama'", "as":"State"
-  }],
-  "mark": {"type": "line", "point": false,"clip": true}}
+  },
+   {
+    "calculate":"datum.value", "as":"Real Median Income"
+  },
+  {"calculate":"year(datum.date)", "as": "year"},
+  {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}],
+
+"params": [    
+      {"name":"minYear", "value":1984,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
+
+  "mark": {"type": "line", "point": false, "color":"lightblue","clip": true}}
   ],
+
+  "transform": [
+      {"filter": "datum.year>=minYear"},
+      {"filter": "datum.year<=maxYear"}
+     ],
+
+"params": [    
+      {"name":"minYear", "value":1984,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "Start year:"}
+      },
+  
+      {"name":"maxYear", "value":2020,
+         "bind":{
+           "input": "range",
+           "min": 1984, 
+           "max": 2020, 
+           "step": 1,
+           "name": "End year:"}
+      }
+    ],
+
   "encoding": {
-    "x": {"field":"date", "type":"temporal", "title":""},
+    "x": {"field":"date","timeUnit": "year", "type":"temporal", "title":""},
     "y":{"field":"value", "type":"quantitative","title":"", "scale": {"domain": [20000,85000]}},
-    "color": {"field":"State", "type":"nominal", "scale":{"scheme":"plasma"}},
-    "tooltip":[ {"field": "value", "type": "quantitative"}, {"field":"State"}]
-  }
-
+    "color": {"field":"State", "type":"nominal","scale":{"scheme":"plasma"}},
+    "tooltip":[{"field":"State"},{"field":"Real Median Income"}]
+  }  
  }
-
