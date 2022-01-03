@@ -15,32 +15,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/immigrants.csv"
   },
-
-  "transform": [
-        {
-          "calculate": "toNumber(datum.Percentage)",
-          "as": "Percentage"
-        },
-        {
-          "calculate": "toNumber(datum.Population)",
-          "as": "Population"
-        },
-        {
-          "calculate": "toNumber(datum.Immigrants)",
-          "as": "Immigrants"
-        }],
-
-  "params": [
-    {
-      "name": "highlight",
-      "select": {"type": "point", "on": "mouseover"}
-    },
-    {"name": "select", "select": "point"}
-  ],
+  
   "mark": {
-    "type": "bar",
-    "stroke": "black",
-    "cursor": "pointer"
+    "type": "bar"
   },
 
  "width": 300,
@@ -50,31 +27,9 @@
     "x": {"field": "State", "type": "ordinal","axis": {"labelAngle":20},"title":null},
     "y": {"field": "Percentage", "type": "quantitative","title":null},
     "tooltip":[{"field":"Percentage"},{"field":"Immigrants"}],
-    "color": {"field":"State", "type":"nominal","legend":null,"scale":{"scheme":"plasma"}},
-    "fillOpacity": {
-      "condition": {"param": "select", "value": 1},
-      "value": 0.3
-    },
-    "strokeWidth": {
-      "condition": [
-        {
-          "param": "select",
-          "empty": false,
-          "value": 2
-        },
-        {
-          "param": "highlight",
-          "empty": false,
-          "value": 1
-        }
-      ],
-      "value": 0
-    }
-  },
+    "color": {"field":"State", "type":"nominal","legend":null,"scale":{"scheme":"plasma"}}},
+    
   "config": {
-    "scale": {
-      "bandPaddingInner": 0.2
-    },
     "background":"rgb(250, 243, 250)"
   }
 }
