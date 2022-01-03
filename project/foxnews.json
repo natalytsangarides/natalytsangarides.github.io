@@ -1,21 +1,33 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "description": "",
+
+   "title": {
+    "text": "Fox News Listenership Correlation with Republican Vote By US State",
+    "subtitle": "Fox news data from google analytics 2016-2020, US Election Results 2020",
+     "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor":"#c55c15"},
+
+  "config": {
+    "background":"rgb(250, 243, 250)",
+    "view": {
+      "stroke": "transparent"}},
+  
   "data": {
-    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/geoMap%20(1).csv"
-  },
-  "width": "container",
-  "title": {
-    "text": "Fox News Listenership Correlation with Republican Vote",
-    "subtitle": "Fox news data from google analytics 2016-2020, Election Results 2020",
-    "subtitleFontStyle":"italic",
-    "subtitleFontSize":11,
-    "subtitleColor":"#c55c15"
+    "url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/foxdata.csv"
   },
 
   "transform": [
     {"calculate": "100*datum.Repvote", "as": "republican"},
     {"calculate": "100*datum.FoxNews", "as": "fox"}
     ],
+  
+  "width":400,
+  "height":300,
 
   "layer": [
     {
@@ -33,9 +45,10 @@
         "y": {
           "field": "fox",
           "type": "quantitative",
-          "scale": {"domain": [30,75]},
+          "scale": {"domain": [30,70]},
           "title": "% of Fox News listenership"
         },
+        "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "plasma"}},
          "tooltip": {"field": "State", "type": "ordinal"}
       }
     },
@@ -59,7 +72,7 @@
           "field": "fox",
           "type": "quantitative"
         },
-         "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "dark2"}},
+         "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "plasma"}},
     "tooltip": {"field": "State", "type": "ordinal"}
       }
     },
