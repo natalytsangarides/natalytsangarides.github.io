@@ -13,7 +13,7 @@
     "subtitleColor":"#c55c15"},
 
   "config": {
-    "background":"#ffffff",
+    "background":"rgb(248, 244, 248)",
     "view": {
       "stroke": "transparent"}},
 
@@ -27,6 +27,6 @@
   "encoding": {
     "x": {"aggregate": "sum", "field": "Value", "title":null, "sort":"descending"},
     "y": {"field": "State", "title": null},
-    "color": {"field": "Type", "title": "Religiosity", "scale": {"scheme": "purplebluegreen"}}
+    "color": {"field": "Type", "title": "Religiosity", "scale": {"scheme": "plasma"}}
   }
 }
