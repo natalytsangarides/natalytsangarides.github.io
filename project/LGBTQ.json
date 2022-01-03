@@ -39,10 +39,10 @@
       "field": "Percentage",
       "type": "quantitative",
       "title": "",
-      "legend": {"clipHeight": 30},
+      "legend": {"clipHeight": 30,"padding":10},
       "scale": {"rangeMax": 2500}
     },
-      "color": {"field": "State", "type": "nominal", "legend": null, "scale": {"scheme": "plasma"}},
+      "color": {"field": "State", "type": "nominal", "legend":null, "scale": {"scheme": "plasma"}},
     "tooltip": {"field": "Percentage", "type": "nominal"}
 
   }
