@@ -5,7 +5,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
     font-weight: lighter;
-    text-align: center;
+    text-align: center !important;
     padding: 0 ;
     }
     
@@ -16,11 +16,9 @@
     .hcontainer {
       display: flow-root;
       position: relative;
-      left: 120px;
-      width: 80%;
       text-align: center;
       border: 3px solid rgb(5, 0, 0);
-      border-top: none;
+      border-top:none;
       border-left: none;
       border-right: none;
     }
@@ -68,8 +66,9 @@
       border-radius: 15px;
       border-color: rgb(250, 243, 250);
       margin: 1% 1% 3% 1%;;
-      text-align: center;
+      text-align: center !important;
      padding: 10px;
+     
       
       /*5px 50px 25px 200px*/
     
@@ -82,7 +81,7 @@
     }
     
     p {
-      font-size: 16px;
+      font-size: 18px;
       margin: 5px 5px;
       line-height: 22.4px;
       color: #323232; 
@@ -91,10 +90,9 @@
     
     body {
       background-color: rgb(250, 243, 250);
-      max-width: auto;
+      max-width: 100%;
       margin: auto;
-      text-align: center;
-      width: 100%;
+      
      }
     
     
@@ -114,15 +112,6 @@
       border-color: rgb(248, 244, 248);
     }
     
-    
-    body {
-      font-family: 'Raleway', sans-serif;
-      font-weight: 400;
-      max-width: 1800px; 
-      margin: 0 auto 0 auto !important;
-      padding: 0 5 0 5; 
-      float: none !important; 
-    }
     
     .button, .buttonActive {
       border: 2px solid rgb(187, 39, 180);
@@ -344,7 +333,6 @@
 
     #loader {
       position: absolute;
-      text-align: center !important;
       left: 50%;
       top: 50%;
       z-index: 1;
@@ -390,12 +378,17 @@
         box-shadow: 0 0 2px rgba(black, .1);
       }
     }
+    
+    #myDiv {
+      display: none;
+      text-align: center;
+    }
 
- #loadermessage {
+    #loadermessage {
       position: absolute;
       text-align: center !important;
+      top: 60% !important;
       left: 46%;
-      top: 60%;
       z-index: 1;
       width: 120px;
       height: 120px;
@@ -405,11 +398,18 @@
       font-size: 20px; 
       letter-spacing: 1px; 
       line-height: 1; 
-      text-align: center;
   }
     
-    
-    #myDiv {
-      display: none;
-      text-align: center;
+  @media only screen and (max-width: 800px) {
+    body {
+      max-width: 98% !important;
+      margin-left: 20px !important;
+    }
+    .chart {
+    width: 400px;
+    overflow:scroll;
+    }
+    #loadermessage {
+      left:40% !important;
+    }
     }
