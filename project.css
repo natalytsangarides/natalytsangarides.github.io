@@ -414,29 +414,29 @@
     }
 
 
-    @media only screen and (min-width: 800px) {
+       @media only screen and (min-width: 800px) {
     #Chart1{
       margin-left:150px;
     }
 
     #Chart2{
-      margin-left:100px;
+      margin-left:80px;
     }
 
     #Chart4{
-      margin-left:100px;
+      margin-left:80px;
     }
 
     #Chart5{
-      margin-left:50px;
+      margin-left:40px;
     }
 
     #Chart6{
-      margin-left:100px;
+      margin-left:60px;
     }
 
     #Chart7{
-      margin-left:100px;
+      margin-left:60px;
     }
 
   }
