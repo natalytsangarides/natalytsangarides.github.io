@@ -1,0 +1,31 @@
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "description": "",
+  
+     "title": {
+      "text": "State Population By Race, Ethnicity Data 2017",
+      "subtitle":"Source: https://www.governing.com/archive/state-minority-population-data-estimates.html",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "#000000",
+      "subtitleColor":"#c55c15"},
+  
+    "config": {
+      "background":"rgb(250, 243, 250)",
+      "view": {
+        "stroke": "transparent"}},
+    "data": {"url": "https://raw.githubusercontent.com/natalytsangarides/natalytsangarides.github.io/main/project/race.csv"
+      , "format": {"type":"csv"}},
+    "mark": "arc",
+    "encoding": {
+      "facet": {
+        "field": "State",
+        "title":null,
+        "type": "ordinal",
+        "columns": 3
+      },
+      "theta": {"field": "Value", "type": "quantitative"},
+      "color": {"field": "Race", "sort":"descending", "type": "nominal", "scale":{"scheme":"plasma"}, "title":"Race and Ethnicity"}
+    }
+  }
