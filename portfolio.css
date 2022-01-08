@@ -90,8 +90,8 @@
     
     body {
       background-color: rgb(250, 243, 250);
-      max-width: 100%;
-      margin: auto;
+      max-width: 60%;
+      margin-left: 235px !important;
       
      }
     
@@ -408,4 +408,10 @@
     #loadermessage {
       left:40% !important;
     }
+      
+      body {
+      max-width: 100%;
+      margin-left: 0px !important;
+      
+     }
     }
