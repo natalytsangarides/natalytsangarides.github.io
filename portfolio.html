@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nataly Tsangarides</title>
 
-    <link rel="stylesheet" href= "project.css">
+    <link rel="stylesheet" href= "portfolio.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
         <!--The next three lines allow the Vega embed-->
@@ -75,141 +75,307 @@ body {
 
  <header>
  
+  
+  <container class="hcontainer">
 
   <h1>Data<span style="color:purple">Science</span></h1></span>
 
   <h2><b>by Nataly Tsangarides</b> </h2>
 
   <p>
-    <a class="button" href="portfolio.html"><i class="fas fa-chart-bar faa-chart-bar animated-hover fa-4x" style="font-size: 1em;"></i> Portfolio</a>
-    <a class="buttonActive" href="project.html"><i class="fas fa-edit"></i> Project</a> 
+    <a class="buttonActive" href="index.html"><i class="fas fa-chart-bar"></i> Portfolio</a>
+    <a class="button" href="project.html"><i class="fas fa-edit faa-edit animated-hover fa-4x" style="font-size: 1em;"></i> Project</a> 
     <a class="button" href="https://github.com/NatalyTsangarides/NatalyTsangarides.github.io"><i class="fab fa-github faa-github animated-hover fa-4x" style="font-size: 1em;"></i> Github</a> 
     <a class="button" href="https://rapidcharts.io/datascience"><i class="fas fa-book faa-book animated-hover fa-4x" style="font-size: 1em;"></i> Course</a>
   </p>
 
-  <h3>Demographics and Political Orientation:</h3>
-  <h4><b>How US state-specific characteristics relate to political affiliation</b></h4>
-    
-    <p>The aim of my project is to look at some specific demographics of a few key states in 
-   the United States, in order to potentially draw some conclusions regarding their connection to 
-   the political affiliation that state historically identifies with. For this, I choose to look at the following states:</p>
+</container>
+</header>
 
-   <iframe title="Context" aria-label="Map" id="datawrapper-chart-qhiB1" src="https://datawrapper.dwcdn.net/qhiB1/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 80% !important; border: none;" height="284"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-   </script>
+<container>
 
-<p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Educational attainment</p>
+  <container class="hcontainer">
 
-<!--CHART EDUACTION -->
+
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700; font-size:25px;">Week 1</p>
+         
+  <h3>Covid-19</h3>
+
+  <p>The chart tracks Covid-19 cases by UK region.</p>
+
+<!--CHART 1-->
 <div class="chart" id="Chart1">
-  <script>
-    var myChart1 = "educationredblue.json";
-    vegaEmbed('#Chart1', myChart1);
-  </script>
-  </div>
+<script>
+  var myChart1 = "chart1_covidUKRegions.json";
+  vegaEmbed('#Chart1', myChart1);
+</script>
+</div>
 
-  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>This is a density graph including 
-    data from the six different states, grouped together as republican (red) and democrat (blue). The data 
-    was downloaded from the <a href="https://fred.stlouisfed.org/">FRED</a> website and combined six different time series from 2006-2019 for each state. The colab notebook for the manipulation 
-    of the data can be found <a href="https://colab.research.google.com/drive/1qu3l1wATJjvXOsGSuuZQi0LA-UtH6bZg?usp=sharing">here.</a> 
-    As I was combining six different datasets, I firstly merged them using Stata and then exported the csv file onto colab. From this graph, we could draw the conclusion 
-    that democratic states are in general, more educated than republican states.</p>
+         
 
-<p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Median Income</p>  
 
-  <!--CHART INCOME -->
+<h3>Productivity chart</h3>
+
+<p>The chart looks at productivity in the UK</p>
+   
+<!--CHART 2 -->
 <div class="chart" id="Chart2">
-  <script>
-    var myChart2 = "stateincomefred.json";
-    vegaEmbed('#Chart2', myChart2);
-  </script>
-  </div>
+<script>
+  var myChart2 = "chart2_ukProductivity.json";
+  vegaEmbed('#Chart2', myChart2);
+</script>
+</div>
 
-  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>This graph was made using six different FRED APIs, one for 
-    each of the states. As the FRED API cannot be accessed directly from an API call, I used a CORS reverse proxy. As illustrated by the graph, up until the Financial Crisis of 2008,
-     the rank of median household income was relatively stable, with no 
-    particular pattern differentiating republican and democratic states. More recently however, specifically after 2014, all three democratic states from our sample 
-    are ranking at the top while the three republican ones are at the bottom. While Republican areas of the country rely 
-    on “traditional” industries that require lower skills, like manufacturing and resource extraction, while Democratic, mostly urban districts contain large concentrations of the nation’s
-     higher-skill, higher-tech professional and digital services. <a href=https://www.brookings.edu/blog/the-avenue/2019/09/10/america-has-two-economies-and-theyre-diverging-fast/)> (source)</a>  </p>
-
-
-    <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">LGBTQ</p>  
-
- <!--CHART LGBTQ -->
- <div class="chart" id="Chart4">
-  <script>
-    var myChart4 = "LGBTQ.json";
-    vegaEmbed('#Chart4', myChart4);
-  </script>
-  </div>
-
-  <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>For this graph, I used as a proxy for LGBTQ population same-sex couple households. 
-    This proxy might not be the most accurate since a lot of same-sex couples do not live together and there are members of the LGBTQ community that are not in a same-sex relationship. 
-    However, it can still illustrate some useful results.  I used data from the <a href="https://www.census.gov/newsroom/press-releases/2019/same-sex-households.html"> Census</a> for same-sex 
-    couple households as well as total number of households and with my own calculations, using Excel, 
-    I generated the data to create the graph. The results are similar throughout the whole period; democratic states have larger LGBTQ populations relative to their total population. 
-
-      <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Media</p>  
-
-        <!--CHART MEDIA -->
-        <div class="chart" id="Chart5">
-         <script>
-           var myChart5 = "foxnews.json";
-           vegaEmbed('#Chart5', myChart5);
-         </script>
-         </div>
-       
-         <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>For the linear regression graph, I regressed the percentage of republican vote on the percentage of Fox News listenership 
-          for all 50 states, for more representative results. The graph suggests a strong positive correlation between Fox News and republican voting. Fox News has been described as practicing biased reporting in favour of the
-           Republican Party, its politicians, and conservative causes while portraying the Democratic Party in a negative light. Research also suggests that Fox News has a causal impact on republican voting. <a href=https://www.econ.umd.edu/publication/fox-news-effect-media-bias-and-voting> (source)</a></p>
+  
+ 
+  <h3>Environment Chart</h3>
+ 
+<p>The chart looks at UK CO2 emissions, by sector</p>
       
-           <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Religion</p>  
+<!--CHART 3 -->
+<div class="chart" id="Chart3">
+<script>
+  var myChart3 = "chartENV10.json";
+  vegaEmbed('#Chart3', myChart3);
+</script>
+</div>
+</container>
 
-            <!--CHART RELIGION -->
-            <div class="chart" id="Chart6">
-             <script>
-               var myChart6 = "religion.json";
-               vegaEmbed('#Chart6', myChart6);
-             </script>
-             </div>
-             <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>The chart divides people into three different groups: Nonreligious, Moderately Religious and Very Religious. 
-              The data was edited manually on Vega-Lite using the data from <a href="https://www.statista.com/statistics/221454/share-of-religious-americans-by-state/"> Statista</a>
-              The chart suggests that the republican states from our sample tend to be more religious while democratic states have higher percentages of nonreligious populations. 
-              The underlying explanations for the relationship are complex, including differing positions of the parties on moral and values issues such as abortion and same-sex marriage, and geographic patterns of 
-              residency that are simultaneously related to religiousness and partisanship. <a href="https://news.gallup.com/poll/174134/religion-remains-strong-marker-political-identity.asp"> (source)</a></p>
-              
-              
-             </p>  
-        
-              <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Race and Ethnicity</p>  
+<container>
 
-                <!--CHART RACE -->
-                <div class="chart" id="Chart7">
-                 <script>
-                   var myChart7 = "race.json";
-                   vegaEmbed('#Chart7', myChart7);
-                 </script>
-                 </div>
-               
-                 <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>The trellis chart illustrates the race
-                   distribution in the six different states. The data was scraped using Python Pandas and the colab notebook can be found <a href="https://colab.research.google.com/drive/1IWnpPgD1fCFBrQ4AT0KAedmoaZwL2fkg?usp=sharing">here.</a> 
-                   From the chart we could conclude that the demographic composition of an area does not provide a significant correlation 
-                   with its partisanship. Republican voters are in general more likely to be white, however, we see a strongly Democratic state such as Washington being 
-                   made up by a mostly white population, while the Republican state of Texas has a less significant percentage of white population. While Texas is not currently considered 
-                   a swing state, changes in its demographic composition, mostly due to immigration, has let some to wonder if the state could become more politically competitive down the road. 
-                   <a href=https://www.pewresearch.org/2020/09/23/the-changing-racial-and-ethnic-composition-of-the-u-s-electorate> (source)</a>
-                  </p>  
+  <container class="hcontainer">
+  
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 2</p>
+
+
+  <h3>UK Coronavirus Data Charts</h3>
+
+<p>The chart looks at new coronavirus cases in the UK, using API</p>
+ 
+<!--CHART 4 -->
+<div class="chart" id="Chart4">
+<script>
+  var myChart4 = "chart_Week2CovidCases.json";
+  vegaEmbed('#Chart4', myChart4);
+</script>
+  </div> 
+    
+  
+  
+    <p>The chart looks at new coronavirus cases in the UK, using own data</p>
+  
+  <!--CHART 5 -->
+  <div class="chart" id="Chart5">
+<script>
+  var myChart5 = "newcasesCSV.json";
+  vegaEmbed('#Chart5', myChart5);
+</script>
+</div> 
+
+  </container>
+
+  <container>
+
+    <container class="hcontainer">
+
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 3</p>
+
+   <h3>BitCoin Price Charts</h3>
+  
+  <p>The chart looks at Daily BTC price in USD</p>
+   
+  <!-- Crypto Chart: In-line JSON data -->
+<div class="chart" id="Chart6">
+<script>
+  var myChart6 = "chartcrypto.json";
+  vegaEmbed('#Chart6', myChart6);
+</script>
+</div>
+     
+
+  <p>The chart looks at Daily BTC price in USD, updated manually</p>
+  
+<!-- Crypto Chart: Data from CSV, updated manually -->
+<div class="chart" id="Chart7">
+<script>
+  var myChart7 = "chartcrypto2.json";
+  vegaEmbed('#Chart7', myChart7);
+</script>
+</div>
+     
+    </container>
+
+    <container>
+
+      <container class="hcontainer">
+ 
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 4</p>
+
+  <h3>FRED data charts</h3>
+          
+   <!--FRED API issue resolved by using a CORS reverse proxy-->
+   
+  <p>The chart looks at US government spending on education, using FRED API</p>
+    
+  <!-- Education chart, FRED -->
+<div class="chart" id="Chart8">
+<script>
+  var myChart8 = "educationfred.json";
+  vegaEmbed('#Chart8', myChart8);
+</script>
+</div>
+  
+  <p>The chart looks at Real Median Household Income in the United States, using FRED API</p>
+ 
+  <!-- Median Household Income chart, FRED -->
+<div class="chart" id="Chart9">
+<script>
+  var myChart9 = "incomefred.json";
+  vegaEmbed('#Chart9', myChart9);
+</script>
+</div>
+
+        </container>
+
+        <container>
+
+          <container class="hcontainer">
+
+<p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 5</p>
+
+   <h3>Four charts using Python loops</h3>
+   
+  <!-- Education chart raw, FRED -->
+<div class="chart" id="Chart10">
+<script>
+  var myChart10 = "charteducation.json";
+  vegaEmbed('#Chart10', myChart10);
+</script>
+</div>
+  
+  <!-- Race chart raw, FRED -->
+<div class="chart" id="Chart11">
+<script>
+  var myChart11 = "chartrace.json";
+  vegaEmbed('#Chart11', myChart11);
+</script>
+</div>
+  
+   <!-- Women chart raw, FRED -->
+<div class="chart" id="Chart12">
+<script>
+  var myChart12 = "chartwomen.json";
+  vegaEmbed('#Chart12', myChart12);
+</script>
+</div>
+  
+  <!-- Income chart raw, FRED -->
+<div class="chart" id="Chart13">
+<script>
+  var myChart13 = "chartincome.json";
+  vegaEmbed('#Chart13', myChart13);
+</script>
+</div>
+          </container>
+
+          <container>
+
+            <container class="hcontainer">
+
+  
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 7</p>
+    
+  <h3>Educational attainment per state</h3>
+ 
+  <p>The chart was made by scraping data from Wikipedia, using python pandas. The colab notebook can be found <a href="https://colab.research.google.com/drive/1B7lbt7UPaiZfDueZCE3lY0jaBMTC4Q5H">here</a></p>
+  
+   <!-- Education, wiki -->
+<div class="chart" id="Chart14">
+<script>
+  var myChart14 = "wikieducation.json";
+  vegaEmbed('#Chart14', myChart14);
+</script>
+</div>
+            </container>
+
+            <container>
+
+              <container class="hcontainer">
+
+     <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 8</p>
+    
+  <h3>Female-led countries handled coronavirus better</h3>
+ 
+  <p>This is my chart inspired by Sarah Smith's argument that "Female leaders have handled coronavirus better", during the "An unfair crisis" talk. The chart compares 
+    'nearest neighbour' countries to offset the small sample size, pairing countries with similar characteristics such as population. It is clear that, the argument is valid as 
+    female-led countries have significantly lower death tolls. This difference could be explained by their risk aversion with regards to life and their willingness to
+     take risks in the domain of the economy.</p>
+  
+   <!-- Covid Deaths, JHU -->
+<div class="chart" id="Chart15">
+<script>
+  var myChart15 = "femaleleader.json";
+  vegaEmbed('#Chart15', myChart15);
+</script>
+</div>
+  </container>
+                
+  <container>
+
+  <container class="hcontainer">
+
+  
+  <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 9</p>
+    
+  <h3>Fox News and Republican Voting</h3>
+ 
+  <p>Linear Regression chart, using raw data from two sources</p>
+  
+   <!-- Fox News -->
+<div class="chart" id="Chart16">
+<script>
+  var myChart16 = "donut.json";
+  vegaEmbed('#Chart16', myChart16);
+</script>
+</div>
+            </container>   
+            <container>
+
+              <container class="hcontainer">
+            
+              
+              <p class="bodyText"><span style="color: rgb(49, 6, 40); font-weight: 700;font-size:25px;">Week 10</p>
+                
+              <h3>Median Income in the US</h3>
+             
+              <p>The graph includes an interactive selector for time periods and a tooltip</p>
+              
+               <!-- Income -->
+            <div class="chart" id="Chart17">
+            <script>
+              var myChart17 = "stateincomefred.json";
+              vegaEmbed('#Chart17', myChart17);
+            </script>
+            </div>
                   
-                  <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Conclusion and Limitations</p>    
-                    
-                    <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>There are a few fundamental differences in the partisan orientation of different demographic 
-                      groups, which have also grown wider in recent years, making the USA as polarized as ever.  While most of the characteristics presented above provide clear correlations between them and political party
-                       identification, the evidence presented is not enough to draw conclusions about causality. In most cases, the relationship could be two-way causal as parameters influence one another. However, the results shown provide some useful insight 
-                       and a motivation for further research on the subject.  </p>
+            <h3>Annual Wage</h3>
+             
+              <p>The graph includes an interactive selector for the countries and a tooltip</p>
+              
+               <!-- Wage -->
+            <div class="chart" id="Chart17">
+            <script>
+              var myChart17 = "wage.json";
+              vegaEmbed('#Chart17', myChart17);
+            </script>
+            </div>      
+                </container>                       
 
-                       <h5><b>Note: The data sources used in each graph are indicated in the subtitle of the chart. For any sources used in the text, links are available. </b></h5>
 
 </div> 
-</header>
+  
 </body>
+</div>
+
+
 </html>
