@@ -102,31 +102,33 @@ body {
 <!--CHART EDUACTION -->
 <div class="chart" id="Chart1">
   <script>
-    var myChart1 = "project/educationredblue.json";
+    var myChart1 = "educationredblue.json";
     vegaEmbed('#Chart1', myChart1);
   </script>
   </div>
 
   <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>This is a density graph including 
-    data from the six different states, grouped together as republican (red) and democrat (blue). The data was scraped, using Python Pandas, 
-    from the FRED website combining the six different time series from 2006-2019 for each state. The colab notebook for the manipulation 
+    data from the six different states, grouped together as republican (red) and democrat (blue). The data 
+    was downloaded from the <a href="https://fred.stlouisfed.org/">FRED</a> website and combined six different time series from 2006-2019 for each state. The colab notebook for the manipulation 
     of the data can be found <a href="https://colab.research.google.com/drive/1qu3l1wATJjvXOsGSuuZQi0LA-UtH6bZg?usp=sharing">here.</a> 
-From this graph, we could draw the conclusion that democratic states are in general, more educated than republican states.</p>
+    As I was combining six different datasets, I firstly merged them using Stata and then exported the csv file onto colab. From this graph, we could draw the conclusion 
+    that democratic states are in general, more educated than republican states.</p>
 
 <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Median Income</p>  
 
   <!--CHART INCOME -->
 <div class="chart" id="Chart2">
   <script>
-    var myChart2 = "project/stateincomefred.json";
+    var myChart2 = "stateincomefred.json";
     vegaEmbed('#Chart2', myChart2);
   </script>
   </div>
 
   <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>This graph was made using six different FRED APIs, one for 
-    each of the states. As illustrated by the graph, up until the Financial Crisis of 2008, the rank of median household income was relatively stable, with no 
+    each of the states. As the FRED API cannot be accessed directly from an API call, I used a CORS reverse proxy. As illustrated by the graph, up until the Financial Crisis of 2008,
+     the rank of median household income was relatively stable, with no 
     particular pattern differentiating republican and democratic states. More recently however, specifically after 2014, all three democratic states from our sample 
-    are ranking at the top while the three republican ones are at the bottom, with Texas being the one closest to the democratic states. While Republican areas of the country rely 
+    are ranking at the top while the three republican ones are at the bottom. While Republican areas of the country rely 
     on “traditional” industries that require lower skills, like manufacturing and resource extraction, while Democratic, mostly urban districts contain large concentrations of the nation’s
      higher-skill, higher-tech professional and digital services. <a href=https://www.brookings.edu/blog/the-avenue/2019/09/10/america-has-two-economies-and-theyre-diverging-fast/)> (source)</a>  </p>
 
@@ -136,23 +138,23 @@ From this graph, we could draw the conclusion that democratic states are in gene
  <!--CHART LGBTQ -->
  <div class="chart" id="Chart4">
   <script>
-    var myChart4 = "project/LGBTQ.json";
+    var myChart4 = "LGBTQ.json";
     vegaEmbed('#Chart4', myChart4);
   </script>
   </div>
 
   <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>For this graph, I used as a proxy for LGBTQ population same-sex couple households. 
     This proxy might not be the most accurate since a lot of same-sex couples do not live together and there are members of the LGBTQ community that are not in a same-sex relationship. 
-    However, it can still illustrate some useful results.  I used data from the Census for same-sex couple households as well as total number of households and with my own calculations 
-    I generated the data to create the graph. The results are similar throughout the whole period; democratic states have larger LGBTQ populations relative to their total population. This is expected, 
-    as three-quarters of Democrats and Democratic-leaning independents (75%) and fewer than half of Republicans and Republican leaners (44%) favour same-sex marriage, according to recent data.<a href=https://www.pewforum.org/fact-sheet/changing-attitudes-on-gay-marriage> (source)</a></p>
+    However, it can still illustrate some useful results.  I used data from the <a href="https://www.census.gov/newsroom/press-releases/2019/same-sex-households.html"> Census</a> for same-sex 
+    couple households as well as total number of households and with my own calculations, using Excel, 
+    I generated the data to create the graph. The results are similar throughout the whole period; democratic states have larger LGBTQ populations relative to their total population. 
 
       <p class="h1"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;">Media</p>  
 
         <!--CHART MEDIA -->
         <div class="chart" id="Chart5">
          <script>
-           var myChart5 = "project/foxnews.json";
+           var myChart5 = "foxnews.json";
            vegaEmbed('#Chart5', myChart5);
          </script>
          </div>
@@ -166,14 +168,15 @@ From this graph, we could draw the conclusion that democratic states are in gene
             <!--CHART RELIGION -->
             <div class="chart" id="Chart6">
              <script>
-               var myChart6 = "project/religion.json";
+               var myChart6 = "religion.json";
                vegaEmbed('#Chart6', myChart6);
              </script>
              </div>
              <p class="h3"><span style="color: rgb(49, 6, 40); font-weight: 1000;font-size:20px;"></span>The chart divides people into three different groups: Nonreligious, Moderately Religious and Very Religious. 
-              The data from 2017, suggests that the republican states from our sample tend to be more religious while democratic states have higher percentages of nonreligious populations. 
+              The data was edited manually on Vega-Lite using the data from <a href="https://www.statista.com/statistics/221454/share-of-religious-americans-by-state/"> Statista</a>
+              The chart suggests that the republican states from our sample tend to be more religious while democratic states have higher percentages of nonreligious populations. 
               The underlying explanations for the relationship are complex, including differing positions of the parties on moral and values issues such as abortion and same-sex marriage, and geographic patterns of 
-              residency that are simultaneously related to religiousness and partisanship. <a href=https://news.gallup.com/poll/174134/religion-remains-strong-marker-political-identity.asp> (source)</a></p>
+              residency that are simultaneously related to religiousness and partisanship. <a href="https://news.gallup.com/poll/174134/religion-remains-strong-marker-political-identity.asp"> (source)</a></p>
               
               
              </p>  
@@ -183,7 +186,7 @@ From this graph, we could draw the conclusion that democratic states are in gene
                 <!--CHART RACE -->
                 <div class="chart" id="Chart7">
                  <script>
-                   var myChart7 = "project/race.json";
+                   var myChart7 = "race.json";
                    vegaEmbed('#Chart7', myChart7);
                  </script>
                  </div>
