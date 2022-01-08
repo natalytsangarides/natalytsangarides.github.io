@@ -27,6 +27,7 @@
   "encoding": {
     "x": {"aggregate": "sum", "field": "Value", "title":null, "sort":"descending"},
     "y": {"field": "State", "title": null},
-    "color": {"field": "Type", "title": "Religiosity", "scale": {"scheme": "plasma"}}
+    "color": {"field": "Type", "title": "Religiosity", "scale": {"scheme": "plasma"}},
+    "tooltip":[{"field":"State"},{"field":"Type"},{"field":"Value"}]
   }
 }
