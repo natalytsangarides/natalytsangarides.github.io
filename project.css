@@ -10,7 +10,7 @@
     }
 
 ::-webkit-scrollbar {
-      width: 5px;
+      width: 8px;
     }
     ::-webkit-scrollbar-track {
       background: rgb(250, 243, 250);
@@ -480,5 +480,10 @@
 
       #loadermessage {
         left:40% !important;
+      }
+        
+        ::-webkit-scrollbar {
+        height: 5px !important;
+        
       }
       }
