@@ -14,7 +14,7 @@
     }
 
 ::-webkit-scrollbar {
-      width: 10px;
+      width: 8px;
     }
     ::-webkit-scrollbar-track {
       background: rgb(250, 243, 250);
@@ -435,4 +435,9 @@
       margin-left: 0px !important;
       
      }
+      
+      ::-webkit-scrollbar {
+        height: 5px !important;
+        
+      }
     }
