@@ -336,7 +336,14 @@
           transform: rotate(0deg);
         }
       }
-      
+
+      .faa-home.animated,
+      .faa-home.animated-hover:hover,
+      .faa-parent.animated-hover:hover > .faa-home {
+        -webkit-animation: edit 5s ease infinite;
+        animation: edit 5s ease infinite;
+      }
+
       .faa-chart-bar.animated,
       .faa-chart-bar.animated-hover:hover,
       .faa-parent.animated-hover:hover > .faa-chart-bar {
