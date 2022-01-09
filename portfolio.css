@@ -12,6 +12,20 @@
     .pagecontainer {
       display: grid;
     }
+
+::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgb(250, 243, 250);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(41, 6, 38);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(116, 18, 99);
+    } 
     
     .hcontainer {
       display: flow-root;
